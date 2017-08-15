@@ -1,0 +1,39 @@
+<div class="row actualcomb-courseinfos-comments" >
+    <div class="col-lg-8 col-md-12" style="">
+        <div class="col-lg-10 col-lg-offset-2" >
+            <!--第1章-->
+            <div class="row actualcomb-courseinfos-commentsdiv" style="" ng-repeat="ac_comments in getA_comments">
+
+                <div class="col-lg-1" ><img ng-src="http://opdizmh0n.bkt.clouddn.com/{{ac_comments.user_icon}}" alt="" width="40" height="40"></div>
+                <div class="col-lg-11">
+                    <h4 ng-bind="ac_comments.user_name"></h4>
+                    <p ng-bind="ac_comments.acdetail"></p>
+                    <span>时间：<span ng-bind="ac_comments.actime"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12" style="">
+        <div class="col-lg-8  col-lg-offset-1" style="">
+            <span>讲师</span>
+            <div class="row">
+                <div class="col-lg-2" style=""><img ng-src="{{getActualcombDetail.ticon}}" alt="" width="40"  style="border-radius: 50%"></div>
+                <div class="col-lg-10">
+                    <h5 ng-bind="getActualcombDetail.tname" ></h5>
+                    <h5 ng-bind="getActualcombDetail.tcareer"></h5>
+                </div>
+            </div><br>
+            <span class="">课前必学</span>
+            <div class="row actualcomb-courseinfos-needcourse" style="" ng-repeat="ac_firstcourse in getA_firstcourse">
+
+                <div class="col-lg-5 "style=""><img ng-src="{{ac_firstcourse.background}}" alt="" width="100" ></div>
+                <div class="col-lg-7">
+                    <h4 ng-bind="ac_firstcourse.c_sortname"></h4>
+                    <p  title=""  ng-bind="ac_firstcourse.cover_detail"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

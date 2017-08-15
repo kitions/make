@@ -1,0 +1,38 @@
+
+<div class="row actualcomb-courseinfos-chapter" >
+    <div class="col-lg-8 col-md-12" style="">
+        <div class="col-lg-10 col-lg-offset-2" >
+            <!--第1章-->
+            <div class="row actualcomb-courseinfos-chapterdiv" style="" ng-repeat="ac_chapter in getA_chapter">
+
+                <div class="col-lg-1" ><img src="ac-details-chapter/images/touxiang.jpg" alt="" width="25"></div>
+                <div class="col-lg-11">
+                    <span ng-bind="ac_chapter.chaptername" style=""></span>&nbsp;&nbsp;&nbsp;<span ng-bind="ac_chapter.chapter_tite"></span>
+                    <p ng-bind="ac_chapter.chapter_detail"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-12" style="">
+        <div class="col-lg-8  col-lg-offset-1" style="">
+            <span>讲师</span>
+            <div class="row">
+                <div class="col-lg-2" style=""><img ng-src="{{getActualcombDetail.ticon}}" alt="" width="40" ></div>
+                <div class="col-lg-10">
+                    <h5 ng-bind="getActualcombDetail.tname" >JoJO</h5>
+                    <h5 ng-bind="getActualcombDetail.tcareer">全栈工程师</h5>
+                </div>
+            </div><br>
+            <span class="">课前必学</span>
+            <div class="row actualcomb-courseinfos-needcourse" style="" ng-repeat="ac_firstcourse in getA_firstcourse">
+
+                <div class="col-lg-5 "style=""><img ng-src="{{ac_firstcourse.background}}" alt="" width="100" ></div>
+                <div class="col-lg-7">
+                    <h4 ng-bind="ac_firstcourse.c_sortname"></h4>
+                    <p  title=""  ng-bind="ac_firstcourse.cover_detail"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

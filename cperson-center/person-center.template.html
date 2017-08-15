@@ -1,0 +1,789 @@
+<div id="main">
+    <div class="bg-other user-head-info">
+        <div class="user-info">
+            <h3 class="user-names clearfix">
+                <span ng-bind="userData.user_name"> </span>
+            </h3>
+            <!--25-->
+            <p class="about-infos" ng-cloak>
+                <span class="gender girl" title="女" ></span>
+                {{userData.career_name}}
+                <span class="u-info-learn" ng-bind="userData.sex">
+
+                </span>
+                <span class="u-info-credit">
+                    <a href="">积分<em>0</em></a>
+                </span>
+            </p>
+            <p class="user-desc" ng-bind="userData.sign"></p>
+            <div class="study-info clearfix">
+                <div class="item follows">
+                    <a href=""><em>0</em></a>
+                    <span>关注</span>
+                </div>
+                <div class="item followers">
+                    <a href="/u/2186158/fans"><em>0</em></a>
+                    <span>粉丝</span>
+                </div>
+            </div><!--.study-info end-->
+        </div><!-- .user-info end -->
+    </div><!-- .big-pic end -->
+    <div class="wrap">
+
+        <div class="slider" style="position: absolute; left: 0px; top: 0px;">
+            <div class="user-pic" data-is-fans="" data-is-follows="">
+                <div class="user-pic-bg"></div><!--user-pic-big end-->
+                <img  width="192" height="192"style="border-radius: 50%;" ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}" class="user-pict">
+                <div class="update-avator" style="bottom: -30px;display: none">
+                    <p><a href="javascript:void(0);" class="js-avator-link" style="color: white">更换头像</a></p>
+                </div>
+                <div class="set-btn"><a href=""><i class="glyphicon glyphicon-cog "></i></a></div>
+            </div>
+
+            <div  class="setup-popl moco-modal-layer fixed" style="top:-150px;left:750px;width:486px;height:421px;">
+                <div class="moco-modal-title"><div>
+                    <span>更换头像</span>
+                    <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+                </div>
+                </div>
+                <div class="moco-modal-inner">
+                    <div class="moco-modal-dialog" style="display: block;">
+                        <div class="tpl-avator">
+                            <div class="moco-form-group avator-wapper">
+
+                                <div class="avator-mode">
+                                    <img ngf-src="user_ico || data.defaultImage"  width="192" height="192"style="border-radius: 50%;">
+                                </div>
+                                <div class="clearfix"style="font-size:15px;margin: 30px;text-align: center">
+                                    <a herf="javascript:void(0);" class="l"style="margin-left:88px;">换一换</a>
+                                    <a ngf-select="" ngf-pattern="'image/*'" ngf-multiple="false" ng-model="user_ico"class="r"style="margin-right:80px;">上传头像</a>
+                                </div>
+                            </div>
+                            <div class="moco-form-group w140">
+                                <div class="moco-control-input">
+                                    <button type="button"  ng-click="uploadUserIcon()" class="btn btn-primary btn-blue moco-modal-close"style="margin-left:125px;">确定</button>
+                                    <button type="button" class="btn btn-primary btn-default moco-modal-close ">取消</button>
+                                    <p class="js-gerror g_error"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mmmm setup-coverLayer"></div>
+            <ul class="cperson-nav">
+                <li class="reda">
+                    <a href="javascript:void 0" ng-click="count=1">
+                        <i class="glyphicon glyphicon-home"></i><span>主页</span><b class="icon-drop_right"></b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void 0" ng-click="count=2">
+                        <i class="glyphicon glyphicon-file"></i><span>课程</span><b class="icon-drop_right"></b>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void 0" ng-click="count=3">
+                        <i class="glyphicon glyphicon-cd"></i><span>实战</span><b class="icon-drop_right"></b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void 0" ng-click="count=4" ng-class="{true: 'active', false: 'inactive'}[count==4]">
+                        <i class="glyphicon glyphicon-question-sign"></i><span>猿问</span><b class="icon-drop_right"></b>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void 0" ng-click="count=5" ng-class="{true: 'active', false: 'inactive'}[count==5]">
+                        <i class="glyphicon glyphicon-book"></i><span>资料</span><b class="icon-drop_right"></b>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- .slider end -->
+
+        <!--主页-->
+        <div ng-show="count==1" class="u-container">
+
+            <div class=" page-home js-usercard-box" id="notices">
+                <div class="dyanmic-title-wrap">
+                    <p class="dynamic-title">最新动态  <span class="tip-setting pointer fr"><span class="settingicon"> <i class="icon-set2"></i> </span>动态设置</span>
+                    </p>
+                </div>
+
+                <div  ng-switch on="dongtai">
+                    <div  ng-switch-default >
+                        <div class="spinner">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div>
+                    </div>
+                    <div ng-switch-when="true">
+
+                        <div class="item newanswer" ng-repeat="mydongtai in myDongtai|orderBy:'sendtime':'desc'">
+                            <span class=" pa share js-share" data-shareid="share_12887583"><i data-shareid="2222" class="icon-share2"></i></span>
+                            <div class="share-box hide clearfix share_12887583" data-objtype="32" data-nickname="{{userData.user_name}}" data-tuid="347270" data-title="{{mydongtai.name}}">
+                                <div class="a shareWrapBox">
+
+                                </div><!-- .share-box end -->
+                            </div>
+                            <a href="">
+                                <img ng-src="http://opdizmh0n.bkt.clouddn.com/{{userData.user_icon}}" class="userHead  " width="40" height="40" data-userid="2186158">
+                            </a>
+                            <div class="content fr">
+                                <div class="head">
+                                    <div class="name">
+                                        <a class=" " data-userid="2186158" href="" ng-bind="userData.user_name">
+
+                                        </a>
+                                    </div>
+                                    <div class="time" ng-bind="mydongtai.sendtime">
+                                    </div>
+                                    <div class="title">
+                                        在此时
+                                    </div>
+                                </div>
+                                <div class="body pr">
+                                    <a class="fl" href="" >
+                                        <img ng-src="{{mydongtai.img}}" width="40" height="40" title="AngularJS">
+                                    </a>
+                                    <div class="content">
+                                        <div class="tag">
+                                            <span>来自</span>
+                                            <a href="" >
+                                                <span class="ml10" ng-bind="mydongtai.name"></span>
+                                            </a>
+                                        </div>
+                                        <div class="subtitle">
+                                            <a href=""  ng-bind="mydongtai.text| cut:true:50:' ...'">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="cb"></div>
+
+                        </div>
+
+                    </div>
+                    <div ng-switch-when="false">
+                        <p class="person-sorry" >对不起，您暂无最新动态</p>
+                    </div>
+                </div>
+
+
+
+
+                <div id="js-setup-popl" class="setup-popl">
+                    <div class="setup-popl-top clearfix">
+                        <span class="title">动态设置</span>
+                        <i class="icon-close close glyphicon glyphicon-remove"></i>
+                    </div>
+
+                    <div class="setup-content">
+                        <!-- 课程 -->
+                        <dl>
+                            <dt class="clearfix">
+                                <span class="dt-tit">课程</span>
+                            <div class="dt-line"></div>
+                            </dt>
+                            <dd class="clearfix">
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="0">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示学习课程动态</p>
+                                </div>
+
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="1">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示新增主讲课程动态</p>
+                                </div>
+
+
+                            </dd>
+                        </dl>
+                        <!-- 课程end -->
+                        <!-- 猿问 -->
+                        <dl>
+                            <dt class="clearfix">
+                                <span class="dt-tit">猿问</span>
+                            <div class="dt-line"></div>
+                            </dt>
+                            <dd class="clearfix">
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="32">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示提问动态</p>
+                                </div>
+
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="33">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示回答动态</p>
+                                </div>
+
+
+                            </dd>
+                        </dl>
+                        <!-- 猿问end -->
+
+                        <!-- 路径 -->
+                        <dl>
+                            <dt class="clearfix">
+                                <span class="dt-tit">路径</span>
+                            <div class="dt-line"></div>
+                            </dt>
+                            <dd class="clearfix">
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="80">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示参加路径动态</p>
+                                </div>
+
+
+
+
+                            </dd>
+                        </dl>
+                        <!-- 路径end -->
+
+                        <!-- 手记 -->
+                        <dl>
+                            <dt class="clearfix">
+                                <span class="dt-tit">手记</span>
+                            <div class="dt-line"></div>
+                            </dt>
+                            <dd class="clearfix">
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="48">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示发表手记动态</p>
+                                </div>
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="50">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示评论手记动态</p>
+                                </div>
+                                <div class="dd-item clearfix">
+                                    <div class="switch on" data-setting="49">
+                                        <div class="pinkline"></div>
+                                        <span class="pinkround"></span>
+                                    </div>
+
+                                    <p class="switchname">显示推荐手记动态</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <!-- 手记end -->
+                    </div>
+
+                    <div class="clearfix">
+                        <p class="noctiseTip">关闭选项后，你将不会看到别人的此类动态</p><span class="save">保存</span>
+                    </div>
+                </div>
+                <div class="setup-coverLayer"></div>
+
+            </div>
+
+            <p class="js-noreload dynamicLoad js-dynamicLoadwrap">
+            <span class="js-dynamicLoad hide  ">
+                下拉显示更多
+            </span>
+            </p>
+        </div>
+        <div ng-show="count==2" class="u-container">
+            <div class="c-tab clearfix">
+                <div class="tool-left l">
+
+                    <a href="" class="sort-item active">最近学习</a>
+                    <!--<a href="/u/2186158/courses?sort=follow" class="sort-item ">我的收藏</a>-->
+                </div>
+                <div class="tool-right r">
+                    <div class="tool-all">
+            <span id="js-columall" class="tool-item">
+                <!--<span>-->
+                <!--全部课程-->
+                <!--</span>-->
+            	<i class="tool-item icon icon-drop_down"></i>
+        	</span>
+                    </div>
+                </div>
+            </div>
+
+            <div  ng-switch on="kecheng">
+                <div  ng-switch-default >
+                    <div class="spinner">
+                        <div class="rect1"></div>
+                        <div class="rect2"></div>
+                        <div class="rect3"></div>
+                        <div class="rect4"></div>
+                        <div class="rect5"></div>
+                    </div>
+                </div>
+                <div ng-switch-when="true">
+                    <div class="js-course-list my-space-course study-tl" >
+                        <div class="clearfix tl-item  tl-item-first" >
+			            <span class="time">
+                <b ng-bind="mymaxtime.year"></b>
+                <em>{{mymaxtime.month}}月{{mymaxtime.day}}日</em>
+            </span>
+                            <div class="course-list course-list-m" ng-repeat="mycourselate in myCourselate">
+                                <ul class="clearfix">
+                                    <li class="course-one" data-courseid="156" data-uid="2186158">
+                                        <div class="course-list-img l">
+                                            <a href="" >
+                                                <img width="200" height="113" alt="{{mycourselate.cname}}" ng-src="{{mycourselate.background}}">
+                                            </a>
+                                        </div>
+                                        <div class="course-list-cont">
+                                            <h3 class="study-hd">
+                                                <a href=""  ng-bind="mycourselate.cname"></a>
+
+                                                <span class="i-new">更新完毕</span>
+                                                <!-- 更新完毕 -->
+                                                <!-- 收藏和删除 -->
+                                                <div class="share-box clearfix">
+                                                    <div class="show-btn"><i class="icon-down2"></i></div>
+                                                    <div class="share-box-con courses-r">
+                                                        <a href="javascript:;" title="收藏" class="follow custom_f"><i class="icon icon-star_outline"></i></a>
+                                                        <a href="javascript:;" title="删除" class="del"><i class="icon icon-notdisplay"></i></a>
+
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <div class="study-points">
+                                                <span class="i-left span-common">已学0%</span>
+                                                <span class="i-mid span-common">用时 1小时20分</span>
+                                                <span class="i-right span-common">学习至1-1 AngularJS实战课程简介</span>
+                                            </div>
+                                            <div class="catog-points">
+                                                <span class="i-left span-common"><a href="">笔记 <i>0</i></a></span>
+                                                <span class="i-mid span-common"><a ui-sref="make-edit">代码 <i>0</i></a></span>
+                                                <span class="i-right span-common"><a href="">问答 <i>1</i></a></span>
+                                                <div class="hoverstyle">
+                                                    <a href=""  class="btn-red continute-btn" ui-sref="courseinfo({cno:mycourselate.cno,c_sortname:mycourselate.c_sortname})">继续学习</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix tl-item " ng-repeat="mycourseelse in myCourseelse">
+			            <span class="time">
+                 <b ng-bind="mycourseelse.year"></b>
+                <em>{{mycourseelse.month}}月{{mycourseelse.day}}日</em>
+            </span>
+                            <div class="course-list course-list-m">
+                                <ul class="clearfix">
+                                    <li class="course-one" data-courseid="773" data-uid="2186158">
+                                        <div class="course-list-img l">
+                                            <a href="" >
+                                                <img width="200" height="113" alt="{{mycourseelse.cname}}" ng-src="{{mycourseelse.background}}">
+                                            </a>
+                                        </div>
+                                        <div class="course-list-cont">
+                                            <h3 class="study-hd">
+                                                <a href=""  ng-bind="mycourseelse.cname"></a>
+
+                                                <span class="i-new">更新完毕</span>
+                                                <!-- 更新完毕 -->
+                                                <!-- 收藏和删除 -->
+                                                <div class="share-box clearfix">
+                                                    <div class="show-btn"><i class="icon-down2"></i></div>
+                                                    <div class="share-box-con courses-r">
+                                                        <a href="javascript:;" title="收藏" class="follow custom_f"><i class="icon icon-star_outline"></i></a>
+                                                        <a href="javascript:;" title="删除" class="del"><i class="icon icon-notdisplay"></i></a>
+
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <div class="study-points">
+                                                <span class="i-left span-common">已学0%</span>
+                                                <span class="i-mid span-common">用时 0分</span>
+                                                <span class="i-right span-common">学习至1-1 H5直播那些事</span>
+                                            </div>
+                                            <div class="catog-points">
+                                                <span class="i-left span-common"><a href="">笔记 <i>0</i></a></span>
+                                                <span class="i-mid span-common"><a ui-sref="make-edit">代码 <i>0</i></a></span>
+                                                <span class="i-right span-common"><a href="">问答 <i>0</i></a></span>
+
+                                                <a href=""  class="btn-red continute-btn">继续学习</a>
+
+                                            </div>
+                                        </div>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix tl-item  tl-item-last" >
+			            <span class="time">
+               <b ng-bind="mymintime.year"></b>
+                <em>{{mymintime.month}}月{{mymintime.day}}日</em>
+            </span>
+                            <div class="course-list course-list-m" ng-repeat="mycoursefirst in myCoursefirst">
+                                <ul class="clearfix">
+                                    <li class="course-one" data-courseid="456" data-uid="2186158">
+                                        <div class="course-list-img l">
+                                            <a href="" >
+                                                <img width="200" height="113" alt="{{mycoursefirst.cname}}" ng-src="{{mycoursefirst.background}}">
+                                            </a>
+                                        </div>
+                                        <div class="course-list-cont">
+                                            <h3 class="study-hd">
+                                                <a href=""  ng-bind="mycoursefirst.cname"></a>
+
+                                                <span class="i-new">更新完毕</span>
+                                                <!-- 更新完毕 -->
+                                                <!-- 收藏和删除 -->
+                                                <div class="share-box clearfix">
+                                                    <div class="show-btn"><i class="icon-down2"></i></div>
+                                                    <div class="share-box-con courses-r">
+                                                        <a href="javascript:;" title="收藏" class="follow custom_f"><i class="icon icon-star_outline"></i></a>
+                                                        <a href="javascript:;" title="删除" class="del"><i class="icon icon-notdisplay"></i></a>
+
+                                                    </div>
+                                                </div>
+                                            </h3>
+                                            <div class="study-points">
+                                                <span class="i-left span-common">已学9%</span>
+                                                <span class="i-mid span-common">用时 3分</span>
+                                                <span class="i-right span-common">学习至2-1 JDK中的注解</span>
+                                            </div>
+                                            <div class="catog-points">
+                                                <span class="i-left span-common"><a href="">笔记 <i>0</i></a></span>
+                                                <span class="i-mid span-common"><a ui-sref="make-edit">代码 <i>0</i></a></span>
+                                                <span class="i-right span-common"><a href="">问答 <i>0</i></a></span>
+                                                <div class="hoverstyle">
+                                                    <a href=""  class="btn-red continute-btn">继续学习</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 分页 -->
+                    <div class="qa-comment-page">
+                    </div>
+                </div>
+                <div ng-switch-when="false">
+                    <p class="person-sorry" >对不起，您暂未学习课程</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div ng-show="count==3" class="u-container">
+
+            <div class="c-tab clearfix">
+                <div class="tool-left l">
+                    <a href="" ng-click="ac=1" ng-class="{true: 'active', false: 'inactive'}[ac==1]"class="sort-item active">已购买</a>
+                    <a href="" ng-click="ac=2"ng-class="{true: 'active', false: 'inactive'}[ac==2]" class="sort-item ">未付款</a>
+                </div>
+            </div>
+            <div class="js-course-list my-space-course study-tl" ng-show="ac==1">
+                <div class="clearfix tl-item  tl-item-first" ng-repeat="myac in myAc">
+                    <div class="course-list course-list-m">
+                        <ul class="clearfix">
+                            <li class="course-one" data-courseid="156" data-uid="2186158">
+                                <div class="course-list-img l">
+                                    <a href="" >
+                                        <img width="200" height="113" alt="{{myac.name}}" ng-src="{{myac.img}}">
+                                    </a>
+                                </div>
+                                <div class="course-list-cont">
+                                    <h3 class="study-hd">
+                                        <a href=""  ng-bind="myac.name"></a>
+
+                                        <span class="i-new">更新完毕</span>
+                                        <!-- 更新完毕 -->
+                                        <!-- 收藏和删除 -->
+                                        <div class="share-box clearfix">
+                                            <div class="show-btn"><i class="icon-down2"></i></div>
+                                            <div class="share-box-con courses-r">
+                                                <a href="javascript:;" title="收藏" class="follow custom_f"><i class="icon icon-star_outline"></i></a>
+                                                <a href="javascript:;" title="删除" class="del"><i class="icon icon-notdisplay"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <div class="study-points">
+                                        <span class="i-left span-common">已学0%</span>
+                                        <span class="i-mid span-common">用时 1小时20分</span>
+                                        <span class="i-right span-common">学习至1-1 AngularJS实战课程简介</span>
+                                    </div>
+                                    <div class="catog-points">
+                                        <span class="i-left span-common"><a href="">笔记 <i>0</i></a></span>
+                                        <span class="i-mid span-common"><a ui-sref="make-edit">代码 <i>0</i></a></span>
+                                        <span class="i-right span-common"><a href="">问答 <i>1</i></a></span>
+                                        <div class="hoverstyle">
+                                            <a href=""  class="btn-red continute-btn">前去学习</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="js-course-list my-space-course study-tl" ng-show="ac==2">
+                <div class="clearfix tl-item  tl-item-first" ng-repeat="mynoorder in myNoorder">
+                    <div class="course-list course-list-m">
+                        <ul class="clearfix">
+                            <li class="course-one" data-courseid="156" data-uid="2186158">
+                                <div class="course-list-img l">
+                                    <a href="" >
+                                        <img width="200" height="113" alt="{{mynoorder.aname}}" ng-src="{{mynoorder.acover_img}}">
+                                    </a>
+                                </div>
+                                <div class="course-list-cont">
+                                    <h3 class="study-hd">
+                                        <a href=""  ng-bind="mynoorder.aname"></a>
+
+                                        <span class="i-new" >&nbsp;&nbsp;订单号：{{mynoorder.ono}}</span>
+                                        <!-- 更新完毕 -->
+                                        <!-- 收藏和删除 -->
+                                        <div class="share-box clearfix">
+                                            <div class="show-btn"><i class="icon-down2"></i></div>
+                                            <div class="share-box-con courses-r">
+                                                <a href="javascript:;" title="收藏" class="follow custom_f"><i class="icon icon-star_outline"></i></a>
+                                                <a href="javascript:;" title="删除" class="del"><i class="icon icon-notdisplay"></i></a>
+
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <div class="study-points">
+                                        <span class="i-left span-common" >￥{{mynoorder.price}}.00</span>
+                                        <span class="i-mid span-common"></span>
+                                        <span class="i-right span-common" ></span>
+                                    </div>
+                                    <div class="catog-points">
+                                        <span  ng-bind="mynoorder.otime"></span>
+                                        <div class="hoverstyle">
+                                            <a href=""  class="btn-red continute-btn " ng-click="buyNow(mynoorder.ano)">立即购买</a>
+                                            <a href=""  class="btn-red continute-btn" style="margin-right: 100px;"ng-click="deleteOrder(mynoorder.ono)">删除订单</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- 分页 -->
+            <div class="qa-comment-page">
+            </div>
+        </div>
+        <div ng-show="count==4" class="u-container">
+            <!--用户空间提问，回答，关注通用导航-->
+            <div class="c-tab clearfix">
+                <div class="tool-left l">
+                    <a href="javascript:void 0" ng-click="ques=1" ng-class="{true: 'active',false: 'inactive'}[ques==1]" class="sort-item active">我的提问</a>
+                    <a  href="javascript:void 0" ng-click="ques=2"ng-class="{true: 'active',false: 'inactive'}[ques==2]" class="sort-item ">我的回答</a>
+                </div>
+            </div>
+            <div class="ques-list" ng-show="ques==1">
+                <div  class="ques-answer" ng-repeat="myyuanwen in myYuanwen">
+                    <div class="tag-img">
+                        <a href="" >
+                            <img ng-src="{{myyuanwen.img}}" alt="{{myyuanwen.c_sortname}}" title="{{myyuanwen.c_sortname}}">
+                        </a>
+                    </div><!--.tag-img end-->
+                    <div class="from-tag">
+                        来自
+                        <a href=""  ng-bind="myyuanwen.c_sortname"></a>
+                    </div><!--.from-tag end-->
+                    <div class="ques-con">
+                        <a  ui-sref="make-question-detail({qno:myyuanwen.qno})" class="ques-con-content" title="{{myyuanwen.name}}"  ng-bind="myyuanwen.name"></a>
+                        <div class="share-box clearfix">
+                            <div class="show-btn"><i class="icon-down2"></i></div>
+                            <div class="share-box-con">
+                                <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_347270" data-quesid="347270" data-bd-bind="1493087966676">
+                                    <a class="bds_weixin icon-share-weichat" data-cmd="weixin" title="分享到微信"></a>
+                                    <a class="bds_tsina icon-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+                                </div>
+                                <div class="follow" title="关注" data-ques-id="347270"><i class="icon-heart"></i></div>
+                            </div><!-- .share-box-con end -->
+                        </div><!-- .share-box end -->
+                    </div><!-- .ques-con end-->
+                    <div class="about-info">
+                        <span class="time" ng-bind="myyuanwen.sendtime"></span>
+                        <a href=""  class="reply-num">{{myyuanwen.shuliang}}个回答</a>
+                    </div><!-- .about-info end -->
+                </div><!-- .ques-answer end -->
+            </div>
+
+
+            <div  ng-show="ques==2" class="ques-list">
+                <div class="ques-answer" ng-repeat="myres in myRes">
+                    <div class="tag-img">
+                        <a href="" >
+                            <img ng-src="{{myres.c_sortimg}}" title="{{myres.c_sortname}}">
+                        </a>
+                    </div><!--.tag-img end-->
+                    <div class="from-tag">
+                        来自
+                        <a href=""  ng-bind="myres.c_sortname"></a>
+                    </div><!--.from-tag end-->
+                    <div class="ques-con">
+                        <a href=""  ui-sref="make-question-detail({qno:myres.qno})" class="ques-con-content" title="{{myres.qtitle}}" ng-bind="myres.qtitle"></a>
+                        <div class="share-box clearfix">
+                            <div class="show-btn"><i class="icon-down2"></i></div>
+                            <div class="share-box-con">
+                                <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_349073" data-quesid="349073" data-bd-bind="1493976063893">
+                                    <a class="bds_weixin icon-share-weichat" data-cmd="weixin" title="分享到微信"></a>
+                                    <a class="bds_tsina icon-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+                                </div>
+                                <div class="follow" data-ques-id="349073"><i title="关注" class="icon-heart"></i></div>
+                            </div><!-- .share-box-con end -->
+                        </div><!-- .share-box end -->
+                    </div><!-- .ques-con end-->
+                    <div class="answer-con" data-answer-id="2">
+                        <div class="user">我的回答</div>
+                        <div class="answer-content">
+                            <a href=""  ng-bind="myres.rdetail"></a>
+                        </div>
+                    </div><!--.answer-con end-->
+                    <div class="about-info">
+                        <span class="time" ng-bind="myres.rtime"></span>
+                        <a href=""  class="reply-num"></a>
+                    </div><!-- .about-info end -->
+
+                </div><!-- .ques-answer end -->
+
+            </div>
+
+
+            <!-- .ques-list end -->
+        </div>
+        <!--个人资料-->
+        <div ng-show="count==5"class="u-container setting-right-wrap wrap-boxes settings">
+
+            <div class="formBox">
+                <div id="setting-profile" class="setting-wrap setting-profile">
+                    <div class="common-title">
+                        个人信息
+                        <a href="javascript: void(0);" class="pull-right js-edit-info" ng-click="coun=2">
+                            <i class="glyphicon glyphicon-pencil"></i> 编辑
+                        </a>
+                    </div>
+                    <div class="line"></div>
+                    <div class="info-wapper" ng-show="coun==1">
+                        <div class="info-box clearfix">
+                            <label class="pull-left">昵称</label><div class="pull-left" ng-cloak>{{userData.user_name}}</div>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">职位</label><div class="pull-left" ng-cloak>{{userData.career_name}}</div>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">性别</label><div class="pull-left" ng-cloak>
+                            {{userData.sex}}</div>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">邮箱</label><div class="pull-left" ng-cloak>{{userData.email}}</div>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">个性签名</label><div class="pull-left" ng-cloak>{{userData.sign}}</div>
+                        </div>
+                    </div >
+                        <!--编辑个人信息-->
+                    <div class="info-wapper "  ng-show="coun==2">
+                        <div class="info-box clearfix">
+                            <label class="pull-left">昵称</label><input type="text"class="pull-left edit-my-info"  ng-model="user_name">
+
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">职位</label>
+                            <select name="career" class="edit-my-info" id="careerId" ng-model="career_id">
+                                <option value="">请选择职位</option>
+                                <option value="1" selected="selected">学生</option>
+                                <option value="2">Python工程师</option>
+                                <option value="3">页面重构设计</option>
+                                <option value="4">Web前端工程师</option>
+                                <option value="5">JS工程师</option>
+                                <option value="6">PHP开发工程师</option>
+                                <option value="7">JAVA开发工程师</option>
+                                <option value="8">移动开发工程师</option>
+                                <option value="9">软件测试工程师</option>
+                                <option value="10">Linux系统工程师</option>
+                                <option value="11">交互设计师</option>
+                                <option value="12">数据库工程师</option>
+                                <option value="13">UI设计师</option>
+                                <option value="14">CG影视动画师</option>
+                                <option value="15">全栈工程师</option>
+                            </select>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">性别</label>
+                            <select name="sex" class="edit-my-info" id="sexId" ng-model="sex">
+                                <option value="0">男</option>
+                                <option value="1">女</option>
+                            </select>
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">邮箱</label><input type="text"class="pull-left edit-my-info"  ng-model="email">
+                        </div>
+                        <div class="info-box clearfix">
+                            <label class="pull-left">个性签名</label><input type="text"class="pull-left edit-my-info"  ng-model="sign">
+                        </div>
+                        <button type="button" class="btn btn-primary"target="_self" ng-click="userinfo(user_name,career_id,sex,email,sign)">确认</button>
+                        <button type="button" class="btn btn-default "ng-click="coun=1">取消</button>
+                    </div>
+
+
+                </div>
+            </div><!--formBox结束-->
+
+
+        </div> <!--个人资料结束-->
+    </div>
+
+</div>

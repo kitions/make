@@ -1,0 +1,78 @@
+
+
+
+
+@media only screen and (max-width: 780px){
+    .shejiaopingtai{
+        display: none;
+    }
+}
+
+.footer{
+    /*height: 100px;*/
+    margin: auto;
+    width: 100%;
+    background-color: #0f0f0f;
+    padding-bottom: 20px;
+}
+
+.footer-link{
+    padding-left: 0px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.footer-link ul li{
+    display: inline-block;
+    margin-right: 20px;
+    /*border: solid 1px crimson;*/
+}
+
+.footer-link ul li a{
+    text-decoration: none;
+    color:#c8cdd2;
+}
+
+.footer-link ul li a:hover{
+    color: white;
+}
+
+
+
+.footer-copyright{
+    height: 30px;
+    /*border: solid 1px sandybrown;*/
+    line-height: 30px;
+    color:#787D82;
+   font-size: 12px;
+
+}
+
+.shejiaopingtai{
+    margin-top: 20px;
+    /*border: solid 1px chartreuse;*/
+    height: 48px;
+    text-align: center;
+}
+
+.shejiaopingtai a{
+    display:inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    margin-top: 5px;
+    background-repeat: no-repeat;
+}
+.footerrightqq{
+    background-image: url("./images/qq.png");
+}
+
+
+.footerrightweixin{
+    background-image: url("./images/weixin.png");
+}
+.footerrightweibo{
+    background-image: url("./images/weibo.png");
+}

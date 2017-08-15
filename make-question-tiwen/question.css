@@ -1,0 +1,196 @@
+.sucesspage h2 {
+    height: 78px;
+    line-height: 78px;
+    font-size: 24px;
+}
+.inputques .first-label {
+    line-height: 60px;
+}
+.ques-label {
+    float: left;
+    width: 30px;
+    text-align: center;
+    color: #ff9600;
+    font-size: 14px;
+    line-height: 38px;
+}
+.question-area .ipt {
+    box-sizing: border-box;
+    width: 100%;
+    height: 58px;
+    font-size: 18px;
+}
+.editor, .ques-tag, .question-area, .sucesspage h2 {
+    margin-left: 30px;
+}
+.question-area, .share-wrap .weichat-posi, .sucesspage {
+      position: relative;
+  }
+
+
+.errortip {
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #f01400;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+
+/*edit*/
+.wysiwyg-toolbar-list {
+
+    max-height: 16em;
+
+    overflow: auto;
+
+    overflow-x: hidden;
+
+    overflow-y: scroll;
+
+}
+
+.wysiwyg-toolbar-list a,
+
+.wysiwyg-toolbar-list a:link,
+
+.wysiwyg-toolbar-list a:visited {
+
+    display: block;
+
+    color: black;
+
+    padding: 5px 10px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+.wysiwyg-toolbar-list a:hover {
+
+    color: HighlightText;
+
+    background-color: Highlight;
+
+}
+
+/* CSS for the smiley plugin */
+
+.wysiwyg-toolbar-smilies {
+
+    padding: 10px;
+
+    text-align: center;
+
+    white-space: normal;
+
+}
+
+.wysiwyg-toolbar-smilies img {
+
+    display: -moz-inline-stack; /* inline-block: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/ */
+
+    display: inline-block;
+
+    *display: inline;
+
+}
+/*edit结束*/
+
+.new-tag-info {
+    font-size: 14px;
+    color: #787d82;
+    line-height: 34px;
+}
+.taglist .hot-label, .taglist .list-tag, .taglist .save-list-tag {
+    font-size: 14px;
+    padding: 0 9px;
+    height: 28px;
+    line-height: 28px;
+    color: #787d82;
+    background-color: #fff;
+    border: 1px solid #d0d6d9;
+    margin: 0 5px 5px 0;
+}
+.taglist .save-list-tag {
+    cursor: pointer;
+    display: inline-block;
+}
+.taglist a{
+   text-decoration: none;
+}
+.hover-style, .new-tags .taglist .onactive, .taglist .hot-label:hover, .taglist .list-tag:hover, .taglist .save-list-tag:hover {
+    border: 2px solid #f01400;
+    padding: 0 8px;
+    height: 26px;
+    line-height: 26px;
+    color: #f01400!important;
+    transition: none!important;
+}
+.verify-code {
+     margin-left: 30px;
+     float: none;
+ }
+.verify-code input.verify-code-ipt {
+    float: left;
+    padding: 4px 10px;
+    color: #14191e;
+}
+.verify-code .verify-img-wrap {
+    margin-left: 10px;
+    float: left;
+    height: 40px;
+    width: 70px;
+}
+.verify-code .verify-img-wrap .verify-img {
+    height: 40px;
+    vertical-align: top;
+    width: 70px;
+}
+.saveques-bottom {
+    position: relative;
+    bottom: 29px;
+   left: 333px;
+}
+.saveques-bottom .btn {
+    width: 140px;
+    background-color: #f01400;
+    border-color: #f01400;
+    color: white;
+    text-decoration: none;
+}
+/*右页面css*/
+.bbs-sendques {
+    color: #787d82;
+    line-height: 24px;
+    font-size: 14px;
+    padding: 0;
+}
+.bbs-sendques h1 {
+    margin-bottom: 14px;
+    padding: 0 20px 0 55px;
+    background: url(images/提醒.png)  no-repeat;
+    color: #14191e;
+    font-size: 18px;
+    line-height: 42px;
+    word-wrap: break-word;
+    margin-top: 20px;
+}
+.bbs-sendques dt {
+    font-weight: 700;
+    font-size: 14px;
+    margin: .2em 0;
+}
+.bbs-sendques dd {
+    margin: 15px 0;
+}
+dl {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}

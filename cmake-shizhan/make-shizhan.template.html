@@ -1,0 +1,496 @@
+<div class="make-shizhan">
+    <!-- 顶部banner轮播 -->
+
+<!--
+    <div id="carousel-example" class="carousel slide" data-ride="carousel" >
+        &lt;!&ndash; Indicators &ndash;&gt;
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example" data-slide-to="0" class="active"><>
+            <li data-target="#carousel-example" data-slide-to="1"><>
+            <li data-target="#carousel-example" data-slide-to="2"><>
+        </ol>&lt;!&ndash; Wrapper for slides &ndash;&gt;
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="https://img.jianke.com/jk2/images/shangc/banner_tcbj.jpg" alt="..."/>
+                <div class="carousel-caption">...</div>
+            </div>
+            <div class="item">
+                <img src="https://img.jianke.com/jk2/images/shangc/banner_hzh1.jpg" alt="..."/>
+                <div class="carousel-caption">...</div>
+            </div>
+            <div class="item">
+                <img src="https://img.jianke.com/jk2/images/shangc/banner_qqg.jpg" alt="..." />
+                <div class="carousel-caption">...</div>
+            </div>
+        </div>
+        &lt;!&ndash; Controls &ndash;&gt;
+
+    </div>
+-->
+
+    <div class="banner-bg-box">
+        <div class="banner-bg">
+            <article class="jq22-container">
+
+                <div class = "caroursel poster-main" data-setting = '{
+	        "width":1200,
+	        "height":200,
+	        "posterWidth":667,
+	        "posterHeight":200,
+	        "scale":0.8,
+	        "dealy":"2000",
+	        "algin":"middle"
+	    }'>
+                    <ul class = "poster-list">
+                        <li class = "poster-item"><img src="cmake-shizhan/images/slid1.jpg" width = "100%" height="100%"></li>
+                        <li class = "poster-item"><img src="cmake-shizhan/images/slid2.jpg" width = "100%" height="100%"></li>
+                        <li class = "poster-item"><img src="cmake-shizhan/images/slid3.jpg" width = "100%" height="100%"></li>
+                    </ul>
+                    <div class = "poster-btn poster-prev-btn"></div>
+                    <div class = "poster-btn poster-next-btn"></div>
+
+                </div>
+
+            </article>
+            <script>
+                Caroursel.init($('.caroursel'))
+            </script>
+        </div>
+    </div>
+    <!-- 顶部轮播end -->
+
+    <!--课程列表-->
+    <div class="w index-main">
+        <div class="container">
+            <nav class="row">
+                <div class="cato-nav-box clearfix">
+                    <div class="cato-nav-row">
+                        <ul class="">
+                            <li class="cato-nav-item focus">
+                                <a href="javascript:void 0" ng-click="Direction(0)">全部</a></li>
+                            <li ng-repeat="b in shizhans" class="cato-nav-item ">
+                                <a href="javascript:void 0" ng-click="Direction($index+1)" ng-bind="b.atypename"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="index-list-wrap">
+            <div class="moco-course-list clearfix" >
+                <div ng-repeat="actualcombAll in newcourse_direction">
+                <div class="moco-course-wrap">
+                    <a ui-sref="shizhaninfo" ng-click="shizhaninfo(actualcombAll.ano)">
+                        <div class="moco-course-box">
+                            <img alt="全栈最后一公里--Node.js项目的线上服务器部署与发布" ng-src="{{actualcombAll.acover_img}}" height="124" width="100%">
+                            <div class="moco-course-intro">
+                                <h3>
+                                   {{actualcombAll.aname}}
+                                </h3>
+                                <p>{{actualcombAll.acover_content}}</p>
+                                <p>{{actualcombAll.atypename}}</p>
+                            </div>
+                            <div class="moco-course-bottom">
+                                <span class="l color-red">￥{{actualcombAll.price}}.00</span>
+                                <span class="r">{{actualcombAll.renshu}}人学习</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="recom-box clearfix">
+            <div class="r right-pic js-play">
+                <img src="cmake-shizhan/images/recom1.png" alt="">
+            </div>
+            <div class="l right-pic js-play">
+            <a href="" ><img src="cmake-shizhan/images/recom2.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- 课程列表end -->
+
+    <!--老师介绍-->
+    <div class="index-teacher home-slideshow" data-stellar-background-ratio="0">
+        <div class="w index-main">
+            <div class="index-teacher-title">
+                <h2>配得上大牛称号的讲师来教你</h2>
+                <p>实战课讲师均来自阿里、百度、腾讯、京东、小米等一线互联网公司，<br>具有多年技术积淀及开发经验，手把手带你做真实项目，让你告别零项目经验。</p>
+            </div>
+            <ul class="star-item" style="width: 6000px; left: -3600px;">
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/580f1686000113dd01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>liuyubobobo</h3>
+                        <p>全栈工程师</p>
+                        <span>他是ACM实力得主，曾获ACM省级金奖、亚洲区铜奖。在开发领域卓有建树，对产品设计、前后端、智能算法等领域均有接触，曾制作近20款个人独立App，并全部成功上架。授课风趣清晰“波总出品，必属精品”！</span>
+                        <div class="start-course">
+                            <a href="" title="玩转算法面试  互联网公司真题 ACM亚洲区铜奖得主亲授">玩转算法面试  互联网公司真题 ACM亚洲区铜奖得主亲授</a>
+                            <a href="" title="算法与数据结构C++精解">算法与数据结构C++精解</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/583fbd5d000116fe01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>七月在夏天</h3>
+                        <p>神秘讲师“七月”</p>
+                        <span>作为微信小程序第一波开发者，他受邀编写小程序开发书籍，不久就会出版。八年研发及团队管理经验，做过程序员、当过项目经理、技术总监、CTO的开发者，他喜欢写代码带来成就感。</span>
+                        <div class="start-course">
+                            <a href="" title="微信小程序入门与实战  常用组件 API 开发技巧 项目实战">微信小程序入门与实战  常用组件 API 开发技巧 项目实战</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/58639ce20001fce901510152-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>__bobby</h3>
+                        <p>django专家</p>
+					<span>具有多年django开发的经验， 一直致力于通过django完成web全栈开发。
+现任创业公司的CTO，无论后台开发、前端开发，还是移动端开发，一直致力于通过django和前端打造高效的全端开发技术栈。</span>
+                        <div class="start-course">
+                            <a href="" title="Python分布式爬虫打造搜索引擎 Scrapy精讲">Python分布式爬虫打造搜索引擎 Scrapy精讲</a>
+                            <a href="" title="强力django+杀手级xadmin  打造上线标准的在线教育平台">强力django+杀手级xadmin  打造上线标准的在线教育平台</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/58c244030001060d01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>qndroid</h3>
+                        <p>Android高级工程师</p>
+                        <span>多年来一直从事移动互联网开发，现就职于优酷，曾负责旅行箱app、优酷app、优酷广告SDK模块开发，现负责优酷与闲鱼、虾 米等多个公司对接广告SDK，从小白一步步成长为技术大牛，在实践中积累了丰富的跨团队开发经验</span>
+                        <div class="start-course">
+                            <a href="" title="组件化开发完整AndroidApp   开发同时封装出通用SDK">组件化开发完整AndroidApp   开发同时封装出通用SDK</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/58a421400001a51601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>亚里士朱德</h3>
+                        <p>资深前端工程师</p>
+                        <span>现任创业公司资深前端工程师，负责前端框架搭建和开发。多年来一直从事B/S系统的开发工作，从jsp全栈到js全栈，从服务端到PC浏览器端再到移动端微信，从定制化开发到前端架构，一路成长踩坑无数，积累了丰富的前后端开发经验。</span>
+                        <div class="start-course">
+                            <a href="" title="AngularJS仿拉勾网WebApp  开发移动端单页应用">AngularJS仿拉勾网WebApp  开发移动端单页应用</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57ea56af00010c3601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>Lyn</h3>
+                        <p>百度前端工程师</p>
+                        <span>追求代码界面的可扩展性、性能、设计和出色的用户体验，对代码复用、组件化有深入研究，是新技术追求者、代码极客、慕课网明星讲师。</span>
+                        <div class="start-course">
+                            <a href="" title="组件方式开发 Web App全站 ">组件方式开发 Web App全站 </a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57ea56bd0001f6cb01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>远人</h3>
+                        <p>前端架构师</p>
+                        <span>国内最早一批HTML5实践者，先后就职于腾讯、人人网、小米、美团。具有丰富的海量服务前端开发经验，在慕课网拥有近20万学员，是学生眼中的明星讲师。</span>
+                        <div class="start-course">
+                            <a href="" title="webApp书城整站开发">webApp书城整站开发</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57ea56cb0001849501400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>Scott</h3>
+                        <p>nodejs技术专家</p>
+                        <span>是国内最早接触 Node.js 的工程师，也是最早用 Node.js 做开发的工程师之一，拥有大量 Node.js 全站开发经验，是新技术的追求者和传播者，对于课程他认真细致，有着近乎完美的追求。</span>
+                        <div class="start-course">
+                            <a href="" title="全栈最后一公里--Node.js项目的线上服务器部署与发布">全栈最后一公里--Node.js项目的线上服务器部署与发布</a>
+                            <a href="" title="React Native贯穿全栈开发App">React Native贯穿全栈开发App</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57ea56d4000174ae01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>singwa</h3>
+                        <p>PHP开发工程师</p>
+                        <span>拥有丰富的大数据、高并发处理、大型网站架构经验。曾在新浪视频负责PHP开发，CCTV6电影网项目经理，现在某大型知名互联网公司负责大数据流的开发。讲课风格激情澎湃，认真负责。</span>
+                        <div class="start-course">
+                            <a href="" title="Thinkphp5.0实战 仿百度糯米开发多商家电商平台">Thinkphp5.0实战 仿百度糯米开发多商家电商平台</a>
+                            <a href="" title="前端后台ThinkPHP开发整站">前端后台ThinkPHP开发整站</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f86da20001310801400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>Jason李捷</h3>
+                        <p>PHP高级工程师</p>
+                        <span>85后，6年项目开发经验，作为一名程序员的“老师”，他拥有深厚的教学功底。工程师和老师的双重身份，让他更理解学生的痛点，他的课程不仅直击要害，而且简洁易懂，将实践和理论完美结合。</span>
+                        <div class="start-course">
+                            <a href="" title="高性能高可用Yii2.0电商平台 高级组件 MySQL LVS">高性能高可用Yii2.0电商平台 高级组件 MySQL LVS</a>
+                            <a href="" title="Yii2.0打造完整电商平台">Yii2.0打造完整电商平台</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f887c40001341b01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>程序员硕</h3>
+                        <p>资深开发工程师/架构师</p>
+                        <span>曾就职于全球领先的半导体公司Freescale、清华大学信研院等知名企业及研究机构。是国内著名开源项目skyeye中Python架构的贡献者。具有多年开发及教学双重经验，精通多种语言。</span>
+                        <div class="start-course">
+                            <a href="" title="Python高级编程技巧实战">Python高级编程技巧实战</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f8888d0001a9b401400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>ParryKK</h3>
+                        <p>前阿里前端工程师</p>
+                        <span>前阿里前端工程师，先后创立饭妈妈、咕咕监控。微软技术社区精英，具有多年实战项目开发与管理经验，从前端到全栈，再到移动端，在追求技术的道路上，他更是发现了Ionic这样的跨平台开发利器，并将其运用的出神入化。</span>
+                        <div class="start-course">
+                            <a href="" title="React.js入门基础与案例开发">React.js入门基础与案例开发</a>
+                            <a href="" title="飞速上手的跨平台App开发">飞速上手的跨平台App开发</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f889ab00018b7f01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>姜维_Wayne</h3>
+                        <p>前端架构师</p>
+                        <span>10余年互联网从业经验，拥有丰富的前后端开发、敏捷过程、项目管理经验，负责过多个产品和技术团队，一直奋斗在Full Stack道路上，爱技术，爱创业，爱一切新事物，玩过乐队，喜欢折腾！</span>
+                        <div class="start-course">
+                            <a href="" title="所向披靡的响应式开发">所向披靡的响应式开发</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f88a090001e84201400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>sqlercn</h3>
+                        <p>数据库架构师</p>
+                        <span>进行过千万级的数据处理，在大数据业务，高并发时数据优化等方面拥有丰富的经验。十几年数据库管理经验，曾就职于聚美优品、猫扑、TOM等多家大型互联网公司。</span>
+                        <div class="start-course">
+                            <a href="" title="高性能可扩展MySQL数据库设计及架构优化 电商项目">高性能可扩展MySQL数据库设计及架构优化 电商项目</a>
+                            <a href="" title="扛得住的MySQL数据库架构">扛得住的MySQL数据库架构</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/57f89b380001922601400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>vczero_</h3>
+                        <p> 现阿里技术专家</p>
+                        <span>拥有多年的前端node·js开发和架构经验，曾在高德地图、携程等大企业就职，做过基础技术架构，带过研发团队。同时对React Native有很深的理解，是《React Native入门与实战》的作者，还是infoQ、OSC等会议讲师。</span>
+                        <div class="start-course">
+                            <a href="" title="React Native快速开发 厕所在哪App LBS定位 框架封装">React Native快速开发 厕所在哪App LBS定位 框架封装</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/5812fccb0001c09001400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>nate</h3>
+                        <p>资深移动开发工程师</p>
+                        <span>任爽老师喜欢把技术分为两类，一类是让你走的更新的技术，“学会某种语言或新特性，能快速上手开发产品”；一类是让你走的更远的技术，“学会优秀的设计思想、模式，真正懂得代码之间的优劣，能设计出适合业务需求的架构，让代码更灵活、优雅，更能应对未来的变化”。</span>
+                        <div class="start-course">
+                            <a href="" title="Android网络层架构设计实战  基于okhttp3">Android网络层架构设计实战  基于okhttp3</a>
+
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/580f1686000113dd01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>liuyubobobo</h3>
+                        <p>全栈工程师</p>
+                        <span>他是ACM实力得主，曾获ACM省级金奖、亚洲区铜奖。在开发领域卓有建树，对产品设计、前后端、智能算法等领域均有接触，曾制作近20款个人独立App，并全部成功上架。授课风趣清晰“波总出品，必属精品”！</span>
+                        <div class="start-course">
+                            <a href="" title="玩转算法面试  互联网公司真题 ACM亚洲区铜奖得主亲授">玩转算法面试  互联网公司真题 ACM亚洲区铜奖得主亲授</a>
+                            <a href="" title="算法与数据结构C++精解">算法与数据结构C++精解</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/583fbd5d000116fe01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>七月在夏天</h3>
+                        <p>神秘讲师“七月”</p>
+                        <span>作为微信小程序第一波开发者，他受邀编写小程序开发书籍，不久就会出版。八年研发及团队管理经验，做过程序员、当过项目经理、技术总监、CTO的开发者，他喜欢写代码带来成就感。</span>
+                        <div class="start-course">
+                            <a href="" title="微信小程序入门与实战  常用组件 API 开发技巧 项目实战">微信小程序入门与实战  常用组件 API 开发技巧 项目实战</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/58639ce20001fce901510152-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>__bobby</h3>
+                        <p>django专家</p>
+					<span>具有多年django开发的经验， 一直致力于通过django完成web全栈开发。
+现任创业公司的CTO，无论后台开发、前端开发，还是移动端开发，一直致力于通过django和前端打造高效的全端开发技术栈。</span>
+                        <div class="start-course">
+                            <a href="" title="Python分布式爬虫打造搜索引擎 Scrapy精讲">Python分布式爬虫打造搜索引擎 Scrapy精讲</a>
+                            <a href="" title="强力django+杀手级xadmin  打造上线标准的在线教育平台">强力django+杀手级xadmin  打造上线标准的在线教育平台</a>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="teacher-pic" style="background:#fff url(http://szimg.mukewang.com/58c244030001060d01400140-200-200.jpg) no-repeat center center;background-size:100% 100%;"></span>
+                    <div class="star-info">
+                        <h3>qndroid</h3>
+                        <p>Android高级工程师</p>
+                        <span>多年来一直从事移动互联网开发，现就职于优酷，曾负责旅行箱app、优酷app、优酷广告SDK模块开发，现负责优酷与闲鱼、虾 米等多个公司对接广告SDK，从小白一步步成长为技术大牛，在实践中积累了丰富的跨团队开发经验</span>
+                        <div class="start-course">
+                            <a href="" title="组件化开发完整AndroidApp   开发同时封装出通用SDK">组件化开发完整AndroidApp   开发同时封装出通用SDK</a>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul class="star-item-btn js-star-item-btn">
+            <li class=""></li>
+
+            <li class=""></li>
+
+            <li class=""></li>
+
+            <li class="on"></li>
+
+        </ul>
+        <div class="slide-draw" style="display: none;"></div>
+    </div>
+    <!-- 老师介绍end -->
+
+    <!--用户评价轮播-->
+    <div class="imgslidb">
+        <div class="index-classmate">
+            <div class="w index-main"style="background-color: #F3F5F7; ">
+                <h2>真实的项目开发经历，就是增加收入的凭证</h2>
+                <p>无论职场工作还是求职路上，实战课所带给你的项目经验和前沿流行技术，让你比竞争者更有实际经验。</p>
+            </div>
+            <div class="scroll_div">
+                <div class='pic-content poster-main carousel' data-setting='{
+	         "width":1200,
+             "height":225,
+             "posterWidth":900,
+             "posterHeight":225,
+             "verticalAlign":"bottom",
+             "autoPlay":true,
+             "speed":1000,
+             "delay":1000,
+             "scale":0.9
+	}'>
+                    <div class='poster-btn poster-prev-btn'></div>
+                    <ul class='pic-content banner-box poster-list'>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/5825c8c500014a7a01000100-100-100.jpg">
+                            <div class="user-content">
+                                <h3>闭上眼睛就是天黑4393631</h3>
+                                <div class="student-tag">来自<a href="" >webApp书城整站开发</a></div>
+                                <p>前端干了一年了，业务需求都能满足了，但是越来越看不惯自己的代码，视频越看感觉越赚，不愧是大牛，学到很多</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/533e4c1500010baf02200220-100-100.jpg">
+                            <div class="user-content">
+                                <h3>cuicuinever</h3>
+                                <div class="student-tag">来自<a href="" >组件化开发完整AndroidApp   开发同时封装出通用SDK</a></div>
+                                <p>真的是不错的教程，之前也开发过几个项目，在开发过程中使用第三方的框架比较多，对框架的实现原理了解比较少，尤其是对封装自己的okhttp通信工具涉及到的思想，对以后的开发自己框架有很大的好处；我觉得在代码封装这块没有太多的优化，代码有一定的冗余，还有就是实现某些功能的时候可能有多种方案实现，可以选择几种分析一下他们的适用场景然后在使用，如fragment的切换项目中使用fragment显示和隐藏实现的，当前比较流行的是ViewPager+fragm...</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/533e4d850001c10602000200-100-100.jpg">
+                            <div class="user-content">
+                                <h3>TonyGu</h3>
+                                <div class="student-tag">来自<a href="" >Python高级编程技巧实战</a></div>
+                                <p>国外党来点个赞。非常喜欢老师的讲课方式，干净利落没有废话。目前只看了5个视频，但是很多之前不太清楚的概念都搞清了。感觉这50个视频之后应该对Python语言的掌握有很好的提升。大概是我听过的最好的中文技术课之一。另外问一下老师，基于Python的专项训练都会有哪些内容？大概什么时候能够上线？</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/5457a1400001cf5101000100-100-100.jpg">
+                            <div class="user-content">
+                                <h3>Franc_Ribery</h3>
+                                <div class="student-tag">来自<a href="" >组件方式开发 Web App全站 </a></div>
+                                <p>特么的？太爽了。。感觉一级棒。。都要激动的说脏话了  这钱花的值。。真值。。学到东西好多。。希望老师继续出JS的教程。。一定还买。。。赞赞。赞赞。赞赞。赞赞。赞赞。赞赞。赞赞。赞赞</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/54585079000110f202200220-100-100.jpg">
+                            <div class="user-content">
+                                <h3>一直被忽略</h3>
+                                <div class="student-tag">来自<a href="" >Android网络层架构设计实战  基于okhttp3</a></div>
+                                <p>工作快两年了，期间有很大一部分的学习都是在慕课网上，个人来说热爱技术，提倡开源。衷心祝愿慕课越做越好。但就这期课程评论一下，这个课程感觉上还是不错的。有些知识nate老师内容上讲的很细，很全面，比自己去总结来的个全面些。感觉很受用，温故而知新，不解释。逻辑上也井井有条，循序渐进，很容易理解。同时我也希望nate老师以后的作品中能在多讲点高阶的编程技巧</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/583938720001247401000100-100-100.jpg">
+                            <div class="user-content">
+                                <h3>Sombra</h3>
+                                <div class="student-tag">来自<a href="" >算法与数据结构C++精解</a></div>
+                                <p>刚开始学这个视频的时候就打算了评价了，可是手机app不能评价，那时购买的人数刚好是100人。老师的课程依然非常好，在学swift的时候就看的老师的视频，老师的解说流畅不会有一点点的卡顿，ppt做得认真清晰，真的是难得的老师。学校教的算法太基础而且很少教我们使用代码实现，自学真的很痛苦，希望老师会出更多的视频，只要是和我学习的有关的都一定会支持</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/53e4816500017a9c01000100-100-100.jpg">
+                            <div class="user-content">
+                                <h3>奉化奔腾PHPer</h3>
+                                <div class="student-tag">来自<a href="" >微信小程序入门与实战  常用组件 API 开发技巧 项目实战</a></div>
+                                <p>老师您好，我今天全部学完了，如果把实战课好老师与不好老师分为三七开的话，您无愧是一位好老师，
+                                    从做课程到帮学生踩坑，什么问题都帮学生想到了，并且感到您总希望自已的学生能学的更多。这种负责的作风让人感动。
+                                    并且您这种逐渐改良的代码写书风格，让人印象深刻，也更容易理解所学的知识。是慕客网中为数不多的好老师！！！
+
+                                    建议老师再出新课程:
+                                    我在想老师可以出一个商品选择，填写收货地址，微信支付，评论，这样的微信小程序。
+                                    以我的观察，这样的课程肯定会在慕客学...</p>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <img src="http://img.mukewang.com/user/54586653000151cd02200220-100-100.jpg">
+                            <div class="user-content">
+                                <h3>卓落客</h3>
+                                <div class="student-tag">来自<a href="" >强力django+杀手级xadmin  打造上线标准的在线教育平台</a></div>
+                                <p>作为一个三年的php开发，再也没理由说php是世界上最好的语言了。首先说下的是老师的技术，绝壁老司机，开车稳，顺顺利利绕过很多坑，偶尔漂移一把，绝对省油（时间）。其次在说这个django+xadmin真的是太爽了，前后台分分钟搞定，加上python强大的类库，真心省很多开发功夫。只是看视频有很多都是在后边在说，建议先看一遍，熟悉下django的基础知识，再跟着撸一遍。最后要感谢一下慕课网，从小白一个，慢慢的跟慕课网一起成长，真的学到了很多干货，自...</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class='poster-btn poster-next-btn'></div>
+                </div>
+
+                <script src="js/carousel.js" type="text/javascript" charset="utf-8"></script>
+                <script type="text/javascript" charset="utf-8">
+                    $(function(){
+                        Carousel.init($('.carousel'));
+                    })
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <!-- 用户评价end -->
+</div>

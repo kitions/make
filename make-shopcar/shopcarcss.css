@@ -1,0 +1,120 @@
+
+.imgbook img {
+    width: 20%;
+}
+
+
+.bookconment-container{
+    height: 130px;
+    text-align: center;
+}
+.icon{
+    float: left;
+}
+.icon img{
+    width: 60%;
+}
+.top{
+    margin-top: 30px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+
+}
+.topnav{
+    margin-top: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    background-color: gainsboro;
+}
+.btntijiao{
+    border: none;
+    color: white;
+    background-color: #F01414;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 120px;
+    height: 60px;
+    vertical-align: middle ;
+}
+.iHaveAnswer{
+    text-decoration: none;
+    color: #999FA5;
+}
+
+
+.shangpin{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.shangpinheader{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.cart-shangpin-content{
+    background-color: #F3F5F7;
+    padding-top: 30px!important;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.priceAll{
+    color: #F01414;
+    font-size: 1.6rem;
+    line-height: 50px;
+}
+.cart-shangpin-content .cart-content-font{
+    color: #07111B;
+    font-size: 1.5rem;
+    line-height: 50px;
+}
+.jianju{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.btn-tijiao{
+    width: 140px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.agreeMent{
+    margin-left: 25px;
+}
+.dingdan-number{
+    font-size: 1.6rem;
+    color: #93999F;
+}
+.pay-tishi{
+    color: #ffa75a;
+    font-size: 1.3rem;
+}
+.pay-top-border{
+    border-top: solid 1px #D9DDE1;
+    margin-top: 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.pay-top-border .pay-alipay{
+    background-image: url("images/zhufubao.png");
+    width: 244px;
+    height: 94px;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+}
+
+.pay-top-border .pay-wepay{
+    background-image: url("images/weixin.png");
+    width: 244px;
+    height: 94px;
+    float: left;
+    margin-right: 25px;
+    position: relative;
+}
+.pay-top-border a:hover{
+    cursor: pointer;
+    border: 2px solid #F01414;
+    box-sizing:border-box;
+
+}

@@ -1,0 +1,50 @@
+.shopCarHeaderBg{
+    /*background-image: image();*/
+    background: url(images/cart-header-bg.jpg) repeat-x left top;
+    height: 160px;
+    background-color: #e3e6e9;;
+    margin-top: -9px;
+}
+.cart-header-warp {
+    width: 1104px;
+    height: 120px;
+    line-height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+
+
+}
+.cart-title h1 {
+    font-size: 32px;
+    line-height: 115px;
+    font-weight: 600;
+    margin-right: 25px;
+    color: #07111b;
+    display: inline-block;
+
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+
+.cart-title-right{
+    padding-top: 20px;
+    font-size: 16px;
+}
+.imgbook{
+    font-size: 1.5em;
+}
+.imgbook .price{
+    color: #F01414;
+    font-size: 1.3rem;
+}
+.zongjia{
+    font-size: 3rem;
+    color: #F01414;
+    font-weight: 600;
+    display: inline-block;
+}

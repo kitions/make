@@ -1,0 +1,178 @@
+<div class="search-main">
+    <div class="search-header">
+        <div class="search-form clearfix">
+            <i class="icon-search"></i>
+            <input type="text" class="search-form-ipt js-search-ipt" value="angular"
+              placeholder="请输入想搜索的内容"ng-model="txtSearch">
+            <span class="search-form-btn js-search-btn"ng-click="filterText=txtSearch">搜索</span>
+            <ul class="search-area-prge js-search-area-prge" style="display: none;"></ul>
+        </div>
+
+        <ul class="hot">
+            <li>热门搜索：</li>
+            <li><a href="javascript:void 0" ng-click="filterText='AngularJS'">AngularJS</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='mysql'" >mysql</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='java'">java</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='android'">android</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='C'">C</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='php'">php</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='javascript'" >javascript</a></li>
+            <li><a href="javascript:void 0" ng-click="filterText='ajax'">ajax</a></li>
+        </ul>
+    </div>
+
+    <div class="search-body">
+        <div class="search-nav-warp">
+            <div class="search-nav" id="searchNav">
+                <a  href="javascript:void 0"class="active" ng-click="course=1"ng-class="{true: 'active', false: 'inactive'}[course==1]">全站</a>
+                <a  href="javascript:void 0" ng-click="course=2"ng-class="{true: 'active', false: 'inactive'}[course==2]">课程</a>
+                <a  href="javascript:void 0" ng-click="course=3"ng-class="{true: 'active', false: 'inactive'}[course==3]">猿问</a>
+                <a  href="javascript:void 0" ng-click="course=4"ng-class="{true: 'active', false: 'inactive'}[course==4]">实战</a>
+            </div>
+        </div>
+        <div class="search-related">
+            共找到 54 个相关内容
+        </div>
+       <div ng-show="course==1">
+           <div>
+               <h2 class="search-title">实战</h2>
+               <div class="course-item clearfix"ng-repeat="actualcombAll in actualcombData|filter:{aname:filterText} |limitTo:s">
+                   <div class="course-item-left">
+                       <a href="" >
+                           <img src="{{actualcombAll.acover_img}}"  width="210" height="120">
+                       </a>
+                   </div>
+                   <div class="course-item-right">
+                       <div class="course-item-title">
+                           <span class="type">[实战]</span>
+                           <a href="" ui-sref="shizhaninfo({ano:actualcombAll.ano})"><span class="highlight" ng-bind="actualcombAll.aname_simple"></span> {{actualcombAll.aname}} </a>
+                       </div>
+
+                       <div class="tag">
+                           <strong>{{actualcombAll.renshu}}人学习</strong>
+                       </div>
+
+                       <p class="content">
+                           <span>课程简介：</span>
+                           用<span class="highlight">{{actualcombAll.aname}}</span>{{actualcombAll.acover_content}}
+
+                       </p>
+                   </div>
+               </div>
+               <p class="href-warp"><a ng-click="s=s+4">更多课程搜索结果</a></p>
+
+           </div>
+           <div>
+
+               <h2 class="search-title">课程</h2>
+
+               <div class="course-item clearfix" ng-repeat="courseAll in courseData|filter:{cname:filterText} |limitTo:c">
+                   <div class="course-item-left">
+
+                       <a href="" >
+                           <img src="{{courseAll.background}}" width="210" height="120">
+                       </a>
+                   </div>
+                   <div class="course-item-right">
+                       <div class="course-item-title">
+                           <span class="type">[课程]</span>
+                           <a href="" ui-sref="courseinfo({cno:courseAll.cno,c_sortname:courseAll.c_sortname})"><span class="highlight" ng-bind="courseAll.cname">Angular</span> 4.0从入门到实战 打造在线竞拍网站</a>
+                       </div>
+
+                       <div class="tag"ng-cloak>
+                           <strong> {{courseAll.renshu}}人学习</strong>
+                       </div>
+
+                       <p class="content">
+                           <span>课程简介：</span>
+                           用<span class="highlight"ng-bind="courseAll.c_sortname"></span>
+                           <span ng-bind="courseAll.cover_detail"></span>
+
+                       </p>
+                   </div>
+               </div>
+               <p class="href-warp"><a ng-click="c=c+4">更多课程搜索结果</a></p>
+
+           </div>
+       </div>
+        <div ng-show="course==2">
+            <h2 class="search-title">课程</h2>
+            <div class="course-item clearfix" ng-repeat="courseAll in courseData|filter:{cname:filterText} |limitTo:s">
+                <div class="course-item-left">
+
+                    <a href="" >
+                        <img src="{{courseAll.background}}" width="210" height="120">
+                    </a>
+                </div>
+                <div class="course-item-right">
+                    <div class="course-item-title">
+                        <span class="type">[课程]</span>
+                        <a href="" ><span class="highlight" ng-bind="courseAll.cname">Angular</span> 4.0从入门到实战 打造在线竞拍网站</a>
+                    </div>
+
+                    <div class="tag"ng-cloak>
+                        <strong> {{courseAll.renshu}}人学习</strong>
+                    </div>
+
+                    <p class="content">
+                        <span>课程简介：</span>
+                        用<span class="highlight"ng-bind="courseAll.c_sortname"></span>
+                        <span ng-bind="courseAll.cover_detail"></span>
+
+                    </p>
+                </div>
+            </div>
+            <p class="href-warp"><a ng-click="s=s+4">更多课程搜索结果</a></p>
+        </div>
+        <div ng-show="course==3">
+            <h2 class="search-title">猿问</h2>
+            <div class="wenda-item clearfix" ng-repeat="getquestions in questionAllData|filter:{user_name:filterText}|limitTo:8">
+
+                <div class="wenda-item-title">
+                    <a href="" target="_blank">
+                        <span class="highlight" ng-bind="getquestions.qtitle"></span>
+                    </a>
+                </div>
+
+                <div class="wenda-item-top clearfix">
+                    <a href="" class="name" ng-bind="getquestions.user_name"></a>
+                    <span>的回答</span>
+                </div>
+                <p class="content" ng-bind-html="getquestions.rdetail">
+                </p>
+            </div>
+            <p class="href-warp"><a href="">更多猿问搜索结果</a></p>
+        </div>
+        <div ng-show="course==4">
+            <h2 class="search-title">实战</h2>
+
+            <div class="course-item clearfix"ng-repeat="actualcombAll in actualcombData|filter:{aname:filterText} |limitTo:c">
+                <div class="course-item-left">
+
+                    <a href="" >
+                        <img src="{{actualcombAll.acover_img}}"  width="210" height="120">
+                    </a>
+                </div>
+                <div class="course-item-right">
+                    <div class="course-item-title">
+                        <span class="type">[实战]</span>
+                        <a href="" ><span class="highlight">Angular</span> 4.0从入门到实战 打造在线竞拍网站</a>
+                    </div>
+
+                    <div class="tag">
+                        <strong>{{actualcombAll.renshu}}人学习</strong>
+                    </div>
+
+                    <p class="content">
+                        <span>课程简介：</span>
+                        用<span class="highlight">{{actualcombAll.aname}}</span>{{actualcombAll.acover_content}}
+
+                    </p>
+                </div>
+            </div>
+            <p class="href-warp"><a ng-click="c=c+4">更多实战搜索结果</a></p>
+
+
+        </div>
+    </div>
+</div>

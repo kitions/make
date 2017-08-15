@@ -1,0 +1,222 @@
+
+<div id="main" style="    min-height: 900px;">
+    <div class="wrap ">
+        <div class="top">
+            <div class="course-content">
+                <div class="course-nav-box">
+                    <div class="course-nav-row clearfix"id="direction">
+                        <span class="hd l">方向：</span>
+                        <div class="bd">
+                            <ul >
+                                <li class="course-nav-item ons">
+                                    <a  href="javascript:void 0" ng-click="Direction(0)">全部</a>
+                                </li>
+                                <li class="course-nav-item "ng-repeat="direction in directionData">
+                                    <a href="javascript:void 0"  ng-click="Direction($index+1)"ng-cloak>{{direction.c_directionname}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-nav-row clearfix" id="sort">
+                        <span class="hd l">分类：</span>
+                        <div class="bd">
+                            <ul>
+                                <li class="course-nav-item ons">
+                                    <a  href="javascript:void 0" ng-click="Sort(0)">全部</a>
+                                </li>
+                                <li class="course-nav-item "ng-repeat="sort in sortData">
+                                    <a href="javascript:void 0" ng-click="Sort($index+1)"ng-cloak>{{sort.c_sortname}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="course-nav-row clearfix border_bottom_none"id="type">
+                        <span class="hd l">类型：</span>
+                        <div class="bd">
+                            <ul>
+                                <li class="course-nav-item ons">
+                                    <a href="javascript:void 0" ng-click="Type(0)">全部</a>
+                                </li>
+                                <li class="course-nav-item "ng-repeat="type in typeData">
+                                    <a href="javascript:void 0" ng-cloak ng-click="Type($index+1)">{{type.c_typename}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="course-container">
+        <div class="course-tool-bar clearfix">
+            <div class="tool-left l">
+                <a href="javascript:void 0" class="sort-item"ng-click="column='addtime';desc=!desc">最新</a>
+                <a href="javascript:void 0" class="sort-item active"ng-click="column='renshu';desc=!desc">最热</a>
+            </div>
+            <div class="l">
+                        <span class="tool-item" style="display: none;">
+                            <a href="javascript:void 0" class="follow-learn tool-chk" href="javascript:void(0);">跟我学</a>
+                        </span>
+            </div>
+            <div class="tool-right r">
+
+                        <span class="tool-item total-num">
+                            共<b>703</b>个课程
+                        </span>
+                        <span class="tool-item tool-pager">
+                            <span class="pager-num">
+                                <b class="pager-cur">1</b>/<em class="pager-total">2</em>
+                            </span>
+                           <a href="javascript:void(0)" class="pager-action pager-prev  disabled"><i class="icon-left2"></i></a>
+                            <a href="" class="pager-action pager-next"><i class="icon-right2"></i></a></span>
+            </div>
+        </div>
+        <div class="course-list">
+            <div class="make-course-list" >
+                    <div class="make-course-wrap szcoursewrap">
+                        <a href="" class="szcourse-cart active">
+                            <div class="szcourse-cart-A">
+                                <div class="szcourse-cart-b">
+                                    <div class="szcourse-p1 clearfix">
+                                        <i class="imv2-war"></i>
+                                        <span>实战课程</span>
+                                    </div>
+                                    <div class="szcourse-p2">Java Spring技术栈构建团购网站前后台</div>
+                                    <div class="szcourse-p3">Java Spring-从项目实现到java spring技术进阶</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">297人在学</span>
+                                        <span class="r">￥388.00</span>
+                                    </div>
+                                </div>
+                                <div class="szcourse-cart-o"></div>
+                                <div class="shizhanpic" style="background-image: url(http://szimg.mukewang.com/58dce4e00001c23605400300-360-202.jpg);"></div>
+                            </div>
+
+                            <div class="szcourse-cart-B">
+                                <div>
+                                    <div class="szcourse-name clearfix">Java Spring技术栈构建团购网站前后台</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">297人在学</span>
+                                        <span class="r">￥388.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""  class="szcourse-cart ">
+                            <div class="szcourse-cart-A">
+                                <div class="szcourse-cart-b">
+                                    <div class="szcourse-p1 clearfix">
+                                        <i class="imv2-war"></i>
+                                        <span>实战课程</span>
+                                    </div>
+                                    <div class="szcourse-p2">强力django+杀手级xadmin  打造上线标准的在线教育平台</div>
+                                    <div class="szcourse-p3">全面掌握django框架,轻松应对python web开发工作</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">791人在学</span>
+                                        <span class="r">￥369.00</span>
+                                    </div>
+                                </div>
+                                <div class="szcourse-cart-o"></div>
+                                <div class="shizhanpic" style="background-image: url(http://szimg.mukewang.com/5859ed790001b9da05400300-360-202.jpg);"></div>
+                            </div>
+
+                            <div class="szcourse-cart-B">
+                                <div>
+                                    <div class="szcourse-name clearfix">强力django+杀手级xadmin  打造上线标准的在线教育平台</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">791人在学</span>
+                                        <span class="r">￥369.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href=""  class="szcourse-cart ">
+                            <div class="szcourse-cart-A">
+                                <div class="szcourse-cart-b">
+                                    <div class="szcourse-p1 clearfix">
+                                        <i class="imv2-war"></i>
+                                        <span>实战课程</span>
+                                    </div>
+                                    <div class="szcourse-p2">全栈最后一公里 - Nodejs 项目的线上服务器部署与发布</div>
+                                    <div class="szcourse-p3">阿里云部署 Node.js+MongoDB 的应用项目，跨越成功的最后一步。</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">209人在学</span>
+                                        <span class="r">￥158.00</span>
+                                    </div>
+                                </div>
+                                <div class="szcourse-cart-o"></div>
+                                <div class="shizhanpic" style="background-image: url(http://szimg.mukewang.com/58e75f2e00015c0705400300-360-202.jpg);"></div>
+                            </div>
+
+                            <div class="szcourse-cart-B">
+                                <div>
+                                    <div class="szcourse-name clearfix">全栈最后一公里 - Nodejs 项目的线上服务器部署与发布</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">209人在学</span>
+                                        <span class="r">￥158.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="" target="_blank" class="szcourse-cart ">
+                            <div class="szcourse-cart-A">
+                                <div class="szcourse-cart-b">
+                                    <div class="szcourse-p1 clearfix">
+                                        <i class="imv2-war"></i>
+                                        <span>实战课程</span>
+                                    </div>
+                                    <div class="szcourse-p2">React Native贯穿全栈开发App</div>
+                                    <div class="szcourse-p3">18个小时纯干货内容，让您一个人从前端到后端完成APP开发。</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">565人在学</span>
+                                        <span class="r">￥368.00</span>
+                                    </div>
+                                </div>
+                                <div class="szcourse-cart-o"></div>
+                                <div class="shizhanpic" style="background-image: url(http://szimg.mukewang.com/57bd5ec80001b0c405400300-360-202.jpg);"></div>
+                            </div>
+
+                            <div class="szcourse-cart-B">
+                                <div>
+                                    <div class="szcourse-name clearfix">React Native贯穿全栈开发App</div>
+                                    <div class="szcourse-bottom clearfix">
+                                        <span class="l">565人在学</span>
+                                        <span class="r">￥368.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div  ng-repeat="courseAll in itemx[curpage]|orderBy:column:desc">
+                    <div class="index-card-container course-card-container"    >
+
+                        <a  class="course-card" ui-sref="courseinfo({cno:courseAll.cno,c_sortname:courseAll.c_sortname})">
+
+                            <div class="course-card-top cart-color " ng-class="courseAll.bgcolor" >
+                                <i class="imv2-war"></i>
+                                <span ng-bind="courseAll.c_sortname"></span>
+                            </div>
+                            <div class="course-card-content">
+                                <h3 class="course-card-name" ng-bind="courseAll.cname"></h3>
+                                <p title="HTML+CSS基础教程8小时带领大家步步深入学习标签用法和意义" ng-bind="courseAll.cover_detail"></p>
+                                <div class="clearfix course-card-bottom">
+                                    <div class="course-card-info" ng-cloak>
+                                        {{courseAll.degreename}}<span>·</span>
+                                        {{courseAll.renshu}}人在学
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
+                        <div class="course-card-bk">
+                            <img src="http://www.imooc.com/courseimg/s/cover050_s.jpg">
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            <do-page></do-page>
+        </div>
+    </div>
+</div>
+

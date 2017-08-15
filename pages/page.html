@@ -1,0 +1,14 @@
+<div class="page"ng-if="totalPage>0">
+    <a href="javascript:void(0)" ng-class="{true:'active'}[curpage==0]" ng-click="prevPage()" >
+        首页
+    </a>
+    <a href="javascript:void(0);" ng-class="{true:'disabled'}[curpage==0]" ng-click="prev()">
+        上一页
+    </a>
+    <a ng-repeat="page in pages"
+       href="javascript:void(0);"
+       class="text-page-tag"
+       ng-click="setPage(page,totalPage)">{{ page+1 }}</a>
+    <a ng-class="{true:'disabled'}[curpage==totalPage-1]" href="javascript:void(0);" ng-disabled="false" ng-click="next()">下一页</a>
+    <a ng-class="{true:'active'}[curpage==totalPage-1]" href="javascript:void(0)" ng-click="nextPage()">末页</a>
+</div>

@@ -1,0 +1,536 @@
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td
+{ margin:0; padding:0; }
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+/*导航条*/
+
+.head a{
+    color:white !important;
+}
+
+.head img{
+    height:100%;
+    padding-top: 5px;
+}
+
+.head{
+    height:50px;
+    padding-bottom: 10px;
+}
+.head{
+    position: relative;
+}
+.head .down{
+    left:-80px!important;
+}
+
+.video-back{
+    display: inline-block;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.video-back:hover{
+    background-color: #363C40;
+}
+.video-class{
+    float: left;
+    margin-left: 10px;
+    line-height: 50px;
+}
+
+.video-class-name1{
+    color: #B5B9BC;
+    font-size: 1.4rem;
+}
+.video-class-name2{
+    color: #7b8088;
+    font-size: 1rem;
+}
+.video-shareqq{
+    color: #787D82;
+    font-size: 1.3rem;
+    line-height: 50px;
+}
+.video-share{
+    margin-left: 5px;
+    padding-bottom: 10px;
+}
+
+.video-header-right{
+    font-size:1.5rem;
+    color: #81868b;
+}
+
+/*导航结束*/
+
+.m{
+    width: auto;
+    height: auto;
+    position: relative;
+    margin-top: -10px;
+}
+
+
+
+.video-down-container{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    flex-wrap: nowrap;
+}
+.video-down-container .video-down-left{
+    flex: 13;
+
+
+}
+.video-down-container .video-down-middle{
+    flex: 1;
+}
+
+.video-down-container .video-down-right{
+    flex: 4;
+
+}
+
+
+.course-menu {
+
+
+    width: 880px;
+    border-bottom: 1px solid #D1D6DA;
+    height: 70px;
+    background-color: #ffffff;
+    overflow: hidden;
+
+}
+.course-menu li {
+    float: left;
+    text-align: center;
+    list-style: none;
+}
+.course-menu a {
+    display: block;
+    padding: 26px 24px;
+    font-size: 16px;
+    color: #4d555d;
+    font-weight: 700;
+    text-decoration: none;
+}
+.course-menu a.active {
+    color: #00b43c;
+}
+.video-fixed{
+    /*position: fixed;*/
+}
+
+
+input, textarea {
+    outline: 0;
+}
+input, button, textarea, select {
+    border: 0;
+}
+.pl-input-wrap .user-head {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 24px;
+    margin-right: 20px;
+}
+.pl-input-inner {
+    width: 770px;
+    position: relative;
+    padding: 8px 10px;
+    border: 1px solid #b7bbbf;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+}
+.pl-input-wrap .user-head img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.input-btm {
+    padding: 30px 0 40px;
+}
+.l {
+    float: left;
+}
+.pl-input-inner textarea {
+    display: block;
+    width: 97%;
+    min-height: 62px;
+    padding: 8px;
+    color: #555;
+    font-size: 14px;
+    resize: none;
+    line-height: 18px;
+
+}
+.pl-input-inner .num-limit {
+    position: absolute;
+    line-height: 100%;
+    font-size: 12px;
+    right: 5px;
+    bottom: 5px;
+    color: #d0d6d9;
+}
+
+a:link, a:visited, body, html {
+    color: #14191e;
+}
+.pl-input-btm .verify-code {
+    margin: 20px 20px 0 84px;
+}
+
+.verify-code {
+    float: left;
+}
+.pl-input-wrap{
+    float: left;
+    margin-top: 30px;
+
+}
+.course-btn, .course-discuss-btn {
+    background-color: #00b33b;
+    font: 14px/40px "Helvetica Neue","Hiragino Sans GB","Segoe UI","Microsoft Yahei","微软雅黑",Tahoma,Arial,STHeiti,sans-serif;
+    height: 40px;
+    padding: 0 12px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 2px;
+    margin-right: 24px;
+    float: right;
+}
+.publish-wrap{
+    overflow: hidden;
+
+}
+.video-line{
+    margin-top: 25px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #D1D6DA;
+}
+.video-comment-content-container .p1-list{
+    padding: 20px 24px;
+    border-bottom: 1px solid #d9dde1;
+}
+.video-comment-content-container .pl-list-avator {
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+.video-comment-content-container .pl-list-avator img {
+    display: block;
+    border-radius: 50%;
+}
+.video-comment-content-container  .pl-list-main {
+    margin-left: 60px;
+}
+.video-comment-content-container .pl-list-nick {
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+.video-comment-content-container  .pl-list-nick a {
+    font-size: 14px;
+    color: #4d555d;
+    font-weight: 700;
+}
+.video-comment-content-container .pl-list-content {
+    margin-top: 3px;
+    font-size: 14px;
+    color: #14191e;
+    line-height: 24px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: auto;
+    margin-right: 10px;
+}
+.video-comment-content-container .pl-list{
+    list-style: none;
+}
+.video-comment-content-container .pl-list-btm {
+    font-size: 14px;
+    color: #93999f;
+    margin-top: 15px;
+}
+.video-comment-content-container .pl-list-btm .list-praise {
+    color: #93999f;
+    float: right;
+}
+.video-comment-content-container .pl-praise{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.video-down-right .coursedownload {
+    margin-bottom: 10px;
+    width: 100%;
+
+}
+.video-down-right h3 {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+
+    border-bottom: 1px solid #d0d6d9;
+    color: #14191e;
+}
+.video-down-right .downlist, .downlist li a {
+    line-height: 24px;
+}
+.video-down-right .downlist li span {
+    display: block;
+    margin-right: 35px;
+    font-size: 12px;
+    color: #4d555d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.video-down-right .downlist li {
+    position: relative;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #edf1f2;
+}
+.video-down-right .downlist li a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 24px;
+    font-size: 12px;
+    padding: 0 8px;
+    color: #00b33b;
+}
+.video-down-right .downlist li .icon {
+    display: inline-block;
+    vertical-align: -2px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.video-down-right .downcode{
+    text-decoration: none;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+
+}
+.video-down-right h4 {
+    position: relative;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 50px;
+    border-bottom: 1px solid #d0d6d9;
+    color: #14191e;
+
+}
+.video-down-right .autowrap {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.mb40 li {
+    padding: 15px 0;
+    border-bottom: 1px solid #edf1f2;
+    line-height: 20px;
+    overflow: hidden;
+    /*font-size: 1.35em;*/
+}
+.video-down-right .course-right-title, .course-right h3 {
+    position: relative;
+}
+
+.video-down-right .course-right-title .more {
+   position: absolute;
+    bottom: 15px;
+    /*left: 230px;*/
+    right: 0;
+
+    font-size: 12px;
+    color: #787d82;
+}
+
+.video-down-right .wendalist li {
+    padding: 15px 0;
+    border-bottom: 1px solid #edf1f2;
+    line-height: 20px;
+    overflow: hidden;
+
+}
+.video-down-right .wendalist li a {
+    color: #787d82;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.video-down-right .wendalist a {
+    white-space: pre;
+}
+.video-down-right .wendalist li i {
+    margin-left: 5px;
+    color: #b5b9bc;
+}
+
+.video-comment-all{
+    /*display: none;*/
+}
+.sortlist {
+    height: 58px;
+    background-color: #f3f5f7;
+}
+.sortlist .onactive, .sortlist .quealltab:hover {
+    color: #2b333b;
+}
+.sortlist .quealltab {
+    float: left;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 58px;
+    text-align: center;
+    padding: 0 20px;
+    color: #787d82;
+    text-decoration: none;
+}
+.answerlist, .answerlist dl, .answertabcon {
+    clear: both;
+}
+.answertabcon a{
+    text-decoration: none;
+}
+.wenda-listcon {
+    padding: 20px 0;
+    border-bottom: 1px solid #d9dde1;
+    overflow: hidden;
+}
+.wenda-listcon .headslider {
+    width: 96px;
+    overflow: hidden;
+    text-align: center;
+}
+.wenda-listcon .headslider img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    vertical-align: top;
+}
+a:link, a:visited, body, html {
+    color: #14191e;
+}
+strong, b {
+    font-weight: bold;
+}
+
+.wendaslider {
+    padding-right: 20px;
+    min-height: 85px;
+    position: relative;
+    overflow: hidden;
+}
+.wendaslider .wendaquetitle {
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: #363d40;
+}
+.replycont .replydes .nickname {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+}
+.wendaslider .wendaquetitle .wenda-nickname {
+    display: block;
+    max-width: 100%;
+    color: #93999f;
+    font-size: 12px;
+    line-height: 14px;
+    padding-bottom: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.wendaslider .wendaquetitle .wenda-nickname:hover{
+    color: #5d6369;
+}
+.wendaslider .wendaquetitle .wendatitle {
+    font-size: 16px;
+    font-weight: 700;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #14191e;
+    line-height: 24px;
+}
+.wendaslider .wendaquetitle .wendatitle:hover{
+    color: #F01414;
+}
+.replycont {
+    margin-top: 10px;
+    position: relative;
+}
+.replycont .replydes {
+    color: #4d555d;
+    font-size: 14px;
+    line-height: 22px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+.replycont .replydes .praise, .replycont .replydes .praise .nickname {
+    color: #4d555d;
+}
+.replycont .replydes .praise .nickname:hover{
+    color: #909fae;
+}
+.replycont .replydes .replysign {
+    font-size: 14px;
+    line-height: 22px;
+}
+.replycont .replydes {
+    color: #4d555d;
+    font-size: 14px;
+    line-height: 22px;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+.wendaslider .replymegfooter {
+    margin-top: 12px;
+    color: #93999f;
+    font-size: 12px;
+}
+.wendaslider .replymegfooter em {
+    font-style: normal;
+    display: inline-block;
+}
+.wendaslider .replynumber {
+    font-size: 12px;
+    color: #93999f;
+}
+.wendaslider .replynumber:hover{
+    color: #46C870;
+}
+.r{
+    float: right;
+}

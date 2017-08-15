@@ -1,0 +1,110 @@
+<div>
+    <div class="shopCarHeaderBg">
+        <div class="cart-header-warp">
+            <div class="cart-title left">
+                <h1>支付订单</h1>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container ">
+        <div class="row shangpinheader">
+            <div class=" col-xs-12 col-sm-12 col-md-12 ">
+                <span class="shangpin">订单:</span>
+                <span class="dingdan-number">1704051131119110</span>
+            </div>
+
+        </div>
+
+        <div class="row cart-shangpin-content" >
+
+            <div class="col-xs-12 col-sm-12 col-md-2"><img  ng-src="{{getActualcombDetail.acover_img}}" alt="" width="161" height="91"></div>
+            <div class="col-xs-12 col-sm-12 col-md-10">
+                <div class="row ">
+                    <div class="col-xs-8 col-sm-8 col-md-7 cart-content-font" ng-bind="getActualcombDetail.aname"> </div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 priceAll"><span class="dingdan-number">实付金额：</span>￥{{getActualcombDetail.price}}.00</div>
+                </div>
+            </div>
+        </div>
+        <!--支付方式-->
+        <div class="row pay-top-border">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 "><h4>支付方式</h4></div>
+            <div>
+                <!--<img src="images/zhufubao.png"  class="pay-alipay">-->
+                <a href="javascript:void 0" class="pay-alipay"></a>
+                <!--<img src="images/weixin.png" class="pay-wepay">-->
+                <a href="javascript:void 0" class="pay-wepay"></a>
+            </div>
+        </div><!--支付方式结束-->
+
+        <div class="row pay-top-border">
+            <span class="pay-tishi"><span class="glyphicon glyphicon-info-sign"></span> 请在 23小时59分钟 以内支付完成，如未完成此订单将自动关闭。需重新购买！</span>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-9"></div>
+            <div class="col-xs-8 col-sm-8 col-md-2">
+                <div class=" text-right jianju" >应付：</div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-1 priceAll">￥{{getActualcombDetail.price}}.00</div>
+        </div>
+
+        <div class="row">
+            <div class=" col-xs-5 col-sm-5  col-md-10 col-lg-10"></div>
+            <div class=" col-xs-7 col-sm-7  col-md-2 col-lg-2">
+                <div class="btn btn-danger btn-lg btn-tijiao" ng-click="payNow()">立即支付</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-xs-6 col-sm-6  col-md-10"></div>
+            <div class="col-xs-6 col-sm-6 col-md-2">
+                <a href="javascript:void 0" class="iHaveAnswer ">我有疑问，需要反馈？</a>
+            </div>
+        </div>
+
+    </div >
+    <div  class="setup-popl moco-modal-layer fixed scucess-layer" style="top:200px;left:750px;width:480px;height:150px;">
+        <div class="moco-modal-title"><div>
+            <span>提示框</span>
+            <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+        </div>
+        </div>
+        <div class="moco-modal-inner">
+            <div class="moco-modal-dialog" style="display: block;">
+                <div class="tpl-avator">
+                    <div class="moco-form-group avator-wapper"style="font-size: 15px;">
+                        订单支付成功，点击确定前往个人中心
+                    </div>
+                </div>
+                <div class="moco-form-group w140">
+                    <div class="moco-control-input">
+                        <span ng-click="open()" class="save"style="height:40px;width:60px;margin-top:-0px;margin-left: 150px; border-radius: 20%">确定</span>
+                        <p class="js-gerror g_error"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mmmm setup-coverLayer scucess" ></div>
+    <div  class="setup-popl moco-modal-layer fixed fail-layer" style="top:100px;left:750px;width:480px;height:150px;">
+        <div class="moco-modal-title"><div>
+            <span>提示框</span>
+            <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+        </div>
+        </div>
+        <div class="moco-modal-inner">
+            <div class="moco-modal-dialog" style="display: block;">
+                <div class="tpl-avator">
+                    <div class="moco-form-group avator-wapper"style="font-size: large">
+                        订单支付失败
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mmmm setup-coverLayer fail" ></div>
+
+</div>

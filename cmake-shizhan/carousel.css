@@ -1,0 +1,67 @@
+/*����*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+/*q:before,q:after{content: ;}*/
+abbr,acronym{border:0;}
+body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,arial,'Hiragino Sans GB',����,sans-serif;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+
+/*�����ʽ*/
+.poster-main{position: relative;width: 900px;height: 270px}
+.poster-main a,.poster-main img{display:block;}
+.poster-main .poster-list{width: 100%;height: 270px}
+.poster-main .poster-list .poster-item{position: absolute;left: 0px;top: 0px}
+.poster-main .poster-btn{position: absolute;height: 100%;width:100px;top: 0px;z-index: 10;opacity: 0.3;}
+.poster-main .poster-prev-btn{left: -100px;}
+.poster-main .poster-next-btn{right: -100px;}
+/************重置样式************/
+*{margin: 0px;padding:0px;}
+ul,li{list-style: none;}
+a{text-decoration: none;}
+/***独立样式**/
+/*.wrap{width: 1000px;margin:20px auto;}*/
+.poster-main{
+    margin: auto;
+    width: 640px;
+    height:223px;
+    position: relative;
+}
+/*carousel*/
+.poster-list{
+    width:90%;
+    margin: auto;
+}
+.poster-main .poster-btn{
+    width: 100px;
+    height:223px;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+}
+.poster-main .poster-prev-btn{
+    left: 0;
+
+    background-position: left center;
+}
+.poster-main .poster-next-btn{
+    right:0;
+    background-position: right center;
+}
+.poster-main .poster-list .list-item{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.list-item a,.list-item a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+

@@ -1,0 +1,175 @@
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.actualcomb-courseinfos-banner{
+    /*position: relative;*/
+    height: 520px;
+
+    /*background-color: red;*/
+
+
+}
+.actualcomb-courseinfos-banner .info-bg{
+    background-image: url("images/58de15670001acc320000520.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 520px;
+    position:absolute;
+    left: 0px;
+}
+.actualcomb-courseinfos-banner .path{
+    margin-left: 30px;
+    width: 500px;
+
+    padding-top: 10px;
+
+}
+.actualcomb-courseinfos-banner .path span{
+    color: black;
+    font-size: 15px;
+    font-weight: 100;
+
+
+
+}
+.actualcomb-courseinfos-banner .info-details{
+    margin-top: 240px;
+    /*background-color: blue;*/
+    height: 20px
+}
+.actualcomb-courseinfos-banner .info-details table{
+    width:450px;text-align: center;margin: auto;
+}
+.actualcomb-courseinfos-banner .info-details table tr .td{
+    border-right: solid grey 1px;width: 150px
+}
+.actualcomb-courseinfos-banner .pricebox{
+    height: 86px;
+    /*background-color: pink;*/
+    line-height: 86px;
+    font-size: 30px;color: #F01400;
+
+}
+.actualcomb-courseinfos-banner .price{
+    margin:auto;width:150px;
+}
+.actualcomb-courseinfos-banner .price span{
+    font-size: 30px;color: #F01400;
+}
+
+.actualcomb-courseinfos-banner .btnpress{
+    width:196px;height: 62px;background-color:#F01404;margin: auto
+}
+.actualcomb-courseinfos-banner .btn-buyimmedia{
+    width: 143px;height: 62px; background-color:#F01404;
+    float: left;
+}
+.actualcomb-courseinfos-banner .btn-buyimmedia:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.actualcomb-courseinfos-banner .btn-buyimmedia .btn-buyimmedia-a{
+    text-decoration: none;
+
+    display: inline-block;width: 143px;height: 26px;margin-top:19px;font-size: 20px;color: #ffffff;text-align: center;line-height: 25px;border-right: solid #ffffff 1px
+}
+.actualcomb-courseinfos-banner .btn-addcart-container{
+    float:left;width:51px;height: 62px
+}
+.actualcomb-courseinfos-banner .btn-addcart{
+    width:25px;height:25px;margin:auto;margin-top: 18px
+}
+.actualcomb-courseinfos-banner .btn-addcart img{
+    width: 25px;
+    height: 25px;
+}
+.actualcomb-courseinfos-nav{
+    width:480px;height: 56px;margin: auto ;display: flex
+}
+.actualcomb-courseinfos-nav div{
+    flex: 1;text-align: center;
+}
+.actualcomb-courseinfos-nav div:hover{
+    border-bottom: solid #F01404 2px;
+}
+.actualcomb-courseinfos-nav div a{
+    display: inline-block;width: 72px;height:56px;text-decoration: none;line-height: 56px;color: #4D555D;font-size: 15px;
+}
+
+
+.actualcomb-courseinfo-introduction-video{
+    margin-top: 10px;
+}
+.actualcomb-courseinfo-introduction{
+    background: #126ccd url(images/1.jpg) no-repeat center bottom;margin-top: 50px;border: 1px solid transparent;
+    height: 453px;
+}
+.actualcomb-courseinfo-introduction .firstp{
+    font-size: 35px;font-weight:900;color: white;margin-left: 250px;margin-top: 25px;line-height: 40px;
+}
+.actualcomb-courseinfo-introduction .secondp{
+    margin-left: 250px;width:500px;font-size: 16px;color:  #9BD5F7;margin-top: 25px
+}
+.actualcomb-courseinfo-introduction .thirdp{
+    margin-left: 250px;width:500px;font-size: 16px;color:  #9BD5F7;margin-top: 15px;
+}
+
+.actualcomb-courseinfo-introduction .smallpart{
+    background-color:#3785E8;height: 138px;margin-top: 50px;border-radius: 3px;box-shadow: 0px 5px 15px -4px #3785e8;
+}
+.actualcomb-courseinfo-introduction .smallpart div{
+    height: 135px;
+    padding-top: 5px;
+    background-color:#3785E8
+}
+.actualcomb-courseinfo-introduction .smallpart .title{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+}
+.actualcomb-courseinfo-introduction .smallpart .content{
+    font-size: 15px;
+    color: #9BD5F7;
+}
+
+
+
+
+.actualcomb-courseinfos-chapter .actualcomb-courseinfos-chapterdiv{
+    height: 160px;
+}
+.actualcomb-courseinfos-chapter .actualcomb-courseinfos-chapterdiv hr{
+    background-color: grey;height: 1px;
+}
+.actualcomb-courseinfos-chapter .actualcomb-courseinfos-needcourse{
+    height: 150px;
+}
+.actualcomb-courseinfos-chapter .actualcomb-courseinfos-needcourse hr{
+    background-color: grey;height: 1px;
+}
+/*.actualcomb-courseinfos-chapter .actualcomb-courseinfos-needcourse-image{*/
+    /*width: 72px;height: 60px*/
+
+/*}*/
+
+
+
+
+.actualcomb-courseinfos-comments .actualcomb-courseinfos-commentsdiv{
+    height: 160px;
+}
+.actualcomb-courseinfos-comments .actualcomb-courseinfos-commentsdiv hr{
+    background-color: grey;height: 1px;
+}
+.actualcomb-courseinfos-comments .actualcomb-courseinfos-needcourse{
+    height: 150px;
+}
+.actualcomb-courseinfos-comments .actualcomb-courseinfos-needcourse hr{
+    background-color: grey;height: 1px;
+}
+.actualcomb-courseinfos-comments .actualcomb-courseinfos-needcourse-image{
+    background-image: url(images/4.png);width: 72px;height: 60px
+
+}

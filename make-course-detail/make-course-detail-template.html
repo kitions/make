@@ -1,0 +1,141 @@
+
+<div class="courseinfom" >
+
+    <div class="content"  >
+        <div class="path">
+            <a href="#">课程</a>
+            <span>\</span>
+            <a href="#" ng-bind="getCourseDetail.c_directionname"></a>
+            <span>\</span>
+            <a href="#" ng-bind="getCourseDetail.c_sortname"></a>
+            <span>\</span>
+            <a href="#" ng-bind="getCourseDetail.cname"></a>
+        </div>
+        <div class="hd clearfix">
+            <h2 class="l"style="color: white ;font-weight: bold;margin-top: 20px;font-size: 30px" ng-bind="getCourseDetail.cname"></h2>
+        </div>
+        <div class="item" style="    margin-top: 30px;">
+            <div class="itemone">
+                <div class="static-item"style="width:150px;margin-left:0px;border:0px; ">
+                    <a   ui-sref="video({cno:getCourseDetail.cno,chapterno:1,sectionno:1,c_sortname:getCourseDetail.c_sortname})"  ng-click="startStudy()" class="btn btn-lg btn-danger text-center">开始学习| <span class="glyphicon glyphicon-star-empty"></span></a>
+                </div>
+                <div class="static-item">
+                    <span class="meta">学习人数</span>
+                    <p class="meta-value js-learn-num" ng-bind="getCourseDetail.renshu"></p>
+                </div>
+                <div class="static-item">
+                    <span class="meta">难度级别</span>
+                    <p class="meta-value" ng-bind="getCourseDetail.degreename">初级</p>
+                </div>
+                <div class="static-item">
+                    <span class="meta">课程时长</span>
+                    <p class="meta-value" ng-bind="getCourseDetail.ctime"></p>
+                </div>
+                <div class="static-item">
+                    <span class="meta">综合评分</span>
+                    <p class="meta-value">9.6</p>
+                </div>
+            </div>
+            <div class="static-right">
+                <div class="tongxun"><img src="make-course-detail/images/weixin.png" alt=""></div>
+                <div class="tongxun"><img src="make-course-detail/images/qq.png" alt=""></div>
+                <div class="tongxun"><img src="make-course-detail/images/weibo.png" alt=""></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-9 col-lg-9">
+            <div class="jianjie">
+                <p ng-cloak>简介 :   {{getCourseDetail.cdetail}}
+                </p>
+            </div>
+            <div class="navs">
+                <a href="javascript:void 0" ng-click="count=1"class="reda"> 章节</a>
+                <a href="javascript:void 0" ng-click="count=2" > 评论</a>
+                <a href="javascript:void 0" ng-click="count=3"> 问答</a>
+                <hr>
+            </div>
+            <div  ng-show="count==1"   class="navs-display"    >
+
+                <div class="zhangjie"    ng-repeat="ch in getChapter">
+                    <div   role="button" >
+                        <h4>
+                            <span class="icon-drop_down js-close"></span>
+                            <strong >
+                                <i class="icon-chapter"></i>
+                                第{{ch.chapterno}}章 {{ch.dir_content}}
+                            </strong>
+                            <span class="glyphicon glyphicon-menu-right bing" style="float: right;margin-top: 10px"></span>
+                            <span class="glyphicon glyphicon-chevron-down lili" style="float: right;margin-top: 10px;display: none"></span>
+                        </h4>
+                        <ul class="menu" style="display:none">
+
+                                <li data-media-id="49" ng-repeat="se in getSection |filter:{chapterno:ch.chapterno}">
+                                    <a href="">
+                                    <div class="contain">
+                                        <a href="" >
+                                            {{se.chapterno}}-{{se.sectionno}} {{se.sectioncontent}}
+                                            <button class="btn btn-sm btn-danger"style="float: right" ui-sref="video({cno:getCourseDetail.cno,chapterno:se.chapterno,sectionno:se.sectionno,c_sortname:getCourseDetail.c_sortname})" ng-click="startStudy()">开始学习</button>
+                                        </a>
+                                    </div>
+                                    </a>
+                                </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div make-video-down-comment-directive ng-show="count==2"></div>
+            <div make-video-down-question-directive ng-show="count==3"></div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <h4 style="margin-top: 20px">讲师提示</h4>
+            <div class="teacher-info">
+                <a href="" target="_blank">
+                    <img data-userid="103747" class="js-usercard-dialog" ng-src="{{getCourseDetail.ticon}}" width="80" height="80">
+                </a>
+                <span class="tit">
+                <a href=""  ng-bind="getCourseDetail.tname"></a><i class="icon-imooc"></i>
+            </span>
+                <span class="job" ng-bind="getCourseDetail.tcareer"></span>
+            </div>
+            <div class="tishi">
+
+                <h6 class="dtkecheng">课程须知</h6>
+                <p>
+                    该课程是针对新手的一个简单基础的课程，让您快速了解JS，
+                    通过一些简单的代码编写体会JS。如果您已经对JS有所了解，
+                    可以跳过本课程，学习JS进阶课程，进一步学习JS相应的基础知识。
+                    学习本课程，希望您至少具备HTML/CSS基础知识，认识常用的标签。
+                </p>
+                <h6 class="dtkecheng" style="margin-top: 10px">老师告诉你能学到什么？</h6>
+                <p> 1. 理解JavaScript基础语法；</p>
+                <p>2. 掌握常用语句的使用方法；</p>
+                <p>3. 学会如何获取DOM元素及进行简单操作。</p>
+
+            </div>
+            <hr>
+            <div class="pathtwo cdetailxuzhip">
+                <h4 class="cdetailxuzhi">相关学习路径</h4>
+                <p>Web前端工程师成长第一阶段(基础篇)</p>
+                <p>jQuery源码探索之旅</p>
+                <p>电商网站全站开发攻略</p>
+                <p>高德开发者必由之路——JS API篇</p>
+                <p> Java工程师</p>
+            </div>
+            <hr>
+            <div class="tuijian cdetailxuzhip">
+                <h4 class="cdetailxuzhi">  推荐课程</h4>
+                <p>表单验证</p>
+                <p>Yahoo军规</p>
+                <p>固定边栏滚动特效</p>
+                <p>网页定位导航特效</p>
+                <p>弹出层效果</p>
+            </div>
+        </div>
+    </div>
+
+</div>

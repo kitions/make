@@ -1,0 +1,137 @@
+<div class="question-details">
+    <div class="row"style=""  >
+        <div class="col-lg-8 col-md-12 col-sm-12" style="">
+            <div class="row">
+                <div class="col-lg-2 col-md-0 col-sm-0" style=""></div>
+                <div class="col-lg-10 col-md-12 col-sm-12" style="">
+
+                    <!--问题详情 start-->
+                    <div class="row"  style="">
+                        <div class="col-md-12 col-lg-12 col-sm-12">
+                            <h3 class="question-details-title" style=""><strong ng-bind="requestMan.qtitle"></strong></h3>
+                            <p class="question-details-content" style="" ng-bind-html="requestMan.qdetail"></p>
+
+                        </div>
+                        <!--提问者 点赞数 start-->
+                        <div class="col-md-12 col-lg-12 col-sm-12"style="margin-top: 10px;">
+                            <span class="question-details-authortext" style="" >提问者</span>&nbsp;
+                            <span class="question-details-author" style="" ng-bind="requestMan.tiwenren"> </span>
+                            <span style="float: right" ng-bind="requestMan.qtime"></span>
+                        </div>
+                    </div>
+
+
+                    <!--提问回复框 start-->
+                    <div class="row" style="margin-top:20px;">
+                            <h4 style="font-size: 20px;margin-bottom: 20px;"ng-click="count=1"><a style="background-color:#F01400;color: white"href=""class="btn">添加回答</a></h4>
+                    </div>
+                    <div  class=" app" ng-show="count==1" style="width: 105%">
+                        <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+                        <button class="btn btn-red detail-ans "style="margin-top:5px;background-color:#F01400;color: white;float: right"  ng-click="res();count=2">回答</button>
+                    </div>
+                    <!--统计回答数-->
+                    <div class="row question-details-answercount"  style="margin-top: 30px;" >
+                        <h4 style="">0回答</h4>
+                        <hr style="">
+                    </div>
+
+                    <div  ng-switch on="respon">
+                        <div  ng-switch-default >
+                            <div>暂无回答</div>
+
+                        </div>
+                        <div ng-switch-when="true">
+                            <div class="row questionreqcss" ng-repeat="res in questionDetail">
+                                <!--头像-->
+                                <div class="col-lg-1 col-md-1 col-sm-1 touxiangqu" >
+                                    <img ng-src="http://opdizmh0n.bkt.clouddn.com/{{res.user_icon}}" width="40" height="40"></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9  question-req">
+                                    <!--用户名-->
+                                    <h5 class="question-details-answerauthor" style="" ng-bind="res.huidaren"></h5>
+                                    <!--个性签名-->
+                                    <p class="question-details-answerauthor-sign" style="" ng-bind="res.sign"></p>
+                                    <!--提问内容-->
+                                    <div class="question-answer-content rich-text aimgPreview" ng-bind-html="res.rdetail">
+
+                                    </div>
+
+                                    <!--点赞量和回复量-->
+                                    <div class="ctrl-bar clearfix"> <span class="agree-with " data-ques-id="334021" data-answer-id="207702" data-hasop="">
+                                <b>赞同</b>
+                                <em style="margin-left: 3px;" ng-bind="res.dianzanrenshu"></em></span>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                    <!--回复时间-->
+                                    <span ng-bind="res.rtime" style="margin-left: -50px;">0</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div ng-switch-when="false">
+                            <div>暂无回答</div>
+
+                        </div>
+                    </div>
+
+
+                    <!--问题回复div start-->
+
+                    <!--问题回复div end-->
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12" style="">
+            <div class="row">
+                <div class="col-lg-2 col-md-0 col-sm-0"></div>
+                <div class="col-lg-7 col-md-12 col-sm-12" style="">
+                    <div class="row question-details-askbuttondiv" style="">
+                        <a ui-sref="asking" class="question-details-askbutton" style="">
+                            <strong>我要提问</strong></a>
+                    </div>
+                    <div class="row question-details-referquestiontext" style="">
+                        <h5 style="    height: 58px;line-height: 58px;font-size: 16px;border-bottom: 1px solid #b8b8b8">相关问题</h5>
+
+                    </div>
+                    <!--相关问题-->
+                    <div class="question-details-referquestion">
+                        <p  style="">public class 类名 class的含义和作用是什么？<span style="">2 回答</span></p>
+                        <p style="">求两个数的差值为什么这样写的？（int minus=Math.abs(age1-age2);）<span style="">2 回答</span></p>
+                        <p style="">单行注释只能占一行吗？<span style="">2 回答</span></p>
+                        <p style="">软件技术范围太广，该如何选择适合自己的<span style="">2 回答</span></p>
+                        <p style="">你这么努力的写代码找不到女朋友的<span style="">3 回答</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-0 col-sm-0" style=""></div>
+        </div>
+    </div>
+    <div  class="setup-popl moco-modal-layer fixed scucess-layer" style="top:200px;left:750px;width:480px;height:150px;">
+        <div class="moco-modal-title"><div>
+            <span>提示框</span>
+            <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+        </div>
+        </div>
+        <div class="moco-modal-inner">
+            <div class="moco-modal-dialog" style="display: block;">
+                <div class="tpl-avator">
+                    <div class="moco-form-group avator-wapper"style="font-size: 15px;">
+                    </div>
+                </div>
+                <div class="moco-form-group w140">
+                    <div class="moco-control-input">
+                        <span class="save moco-modal-close"style="height:40px;width:60px;margin-top:-0px;margin-left: 150px; border-radius: 20%">确定</span>
+                        <p class="js-gerror g_error"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mmmm setup-coverLayer scucess" ></div>
+</div>

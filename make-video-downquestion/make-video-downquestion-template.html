@@ -1,0 +1,71 @@
+<div>
+<div class="video-question-all " >
+                <div class="sortlist">
+                    <div class="ordertab clearfix">
+                        <a href="javascript:void(0)" data-order="1" class="quealltab onactive">全部</a>
+                        <a href="javascript:void(0)" data-order="2" class="quealltab">精华</a>
+                    </div>
+                </div>
+
+                <div class="answertabcon" ng-repeat="re in courseQuestion|limitTo:b">
+                    <div class="wenda-listcon ">
+                        <div class="headslider l">
+                            <a href="javascript:void(0)" class="wenda-head" target="_blank" >
+                                <img  ng-src="http://opdizmh0n.bkt.clouddn.com/{{re.user_icon}}"
+                                      width="40">
+                            </a>
+                        </div>
+                        <div class="wendaslider">
+                            <h2 class="wendaquetitle">
+                                <a href="javascript:void(0)" target="_blank" class="wenda-nickname" ng-bind="re.tiwenren">
+
+                                </a>
+                                <div class="wendatitlecon">
+                                    <a  href="javascript:void(0)" ui-sref="make-question-detail({qno:re.qno})" class="wendatitle">
+                                        <b ng-bind="re.qtitle"></b>
+                                    </a>
+                                </div>
+                            </h2>
+                            <div class="replycont ">
+                                <div class="fl replydes">
+                                    <span class="replysign praise">
+                                        [最新
+                                        <a href="javascript:void(0)" target="_blank" title="MR158" class="nickname" ng-bind="re.huidaren">
+
+                                        </a>
+                                        的回答]
+                                    </span>
+                                    <span class="replydet" ng-bind="re.rdetail">
+                                        <!--哦哦是作用域的问题，我把scope:{} 写成了 $scope:{}-->
+                                    </span>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="replymegfooter clearfix">
+                                <div class="wenda-time l">
+                                    <em ng-bind="re.latest_time">
+                                        <!--5天前-->
+                                    </em>
+                                </div>
+                                <a href="javascript:void(0)" target="_blank" class="replynumber r hasanswernum">
+                        <span class="ys">
+                            <b class="numShow" ng-bind="re.renshu"></b>
+                            <span class="number">回答</span>
+                        </span>
+                                    <span class="browsenum">
+
+                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <p class="href-warp"><a ng-click="b=b+4">加载更多</a></p>
+                <!--分页-->
+
+</div>    <!--问答模块结束-->
+
+</div>

@@ -1,0 +1,100 @@
+.CodeMirror {
+    line-height: 1.3em;
+    font-family: monospace;
+
+    /* Necessary so the scrollbar can be absolutely positioned within the wrapper on Lion. */
+    position: relative;
+    /* This prevents unwanted scrollbars from showing up on the body and wrapper in IE. */
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+
+    height:554px;
+    margin-bottom: 9px;
+    color: #555555;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.CodeMirror-focused {
+    /* Copied from Bootstrap's textarea */
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+.editor_control{
+    width:700px;
+    display: inline-block;
+
+
+}
+.aticle-container {
+    left: 0;
+    width: 600px;
+    overflow-y: auto;
+    background: #edf1f2;
+}
+.cwrap-autoheight {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin-top: 5px;
+}
+.code-panel {
+     background: #edf1f2;
+     overflow-x: hidden;
+ }
+.code-panel, .panel-list, .panel-list-qa {
+    overflow-y: auto;
+}
+
+h2.code-head {
+    border-bottom: 1px solid #d0d6d9;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "微软雅黑";
+    line-height: 20px;
+    color: #14191e;
+    padding: 16px 0;
+    margin: 0 15px;
+}
+.code-description {
+    color: #14191e;
+    word-break: break-all;
+}
+.co {
+    color: #14191e;
+}
+.co, pre.code {
+    line-height: 1.6em;
+}
+.code-desc {
+    padding: 0 15px 15px;
+    word-break: break-all;
+    overflow: hidden;
+}
+.runcodecss{
+    display: inline-block;
+    background-color:#00B33B;
+    color:white;
+    height: 50px;
+    width: 20%;
+    position: relative;
+    left: 170%;
+    font-size: 1.5rem;
+}

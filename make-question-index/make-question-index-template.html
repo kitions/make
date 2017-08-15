@@ -1,0 +1,362 @@
+<div class="containers">
+    <div class="col-md-8 ">
+        <div class="shequ">
+            <span>程序员自己的问答社区</span>
+            <button class="btn btn-danger btn-lg "style="float: right;margin:20px;" ui-sref="asking">我要提问</button>
+        </div>
+        <div class="navs" style="margin-top: 20px;border-bottom: 1px solid #D0D0D0">
+            <a href="" ng-click="count=1"class="reda"> <span>推荐</span></a>
+            <a href="" ng-click="count=2"><span> 等待回答</span></a>
+            <a href="" ng-click="count=3"> <span>全部</span></a>
+        </div>
+
+        <div class="wenda-list" ng-show="count==1">
+
+            <div class="ques-answer" ng-repeat="getquestion in itemx[curpage]">
+                <div class="tag-img">
+                    <a href="" >
+                        <img ng-src="{{getquestion.c_sortimg}}" title="JAVA">
+                    </a>
+                </div>
+                <!--.tag-img end-->
+                <div class="from-tag">来自
+                    <a href=""ng-bind="getquestion.c_sortname"></a>
+
+                </div>
+                <!--.from-tag end-->
+                <div class="ques-con">
+                    <a ui-sref="make-question-detail({qno:getquestion.qno})" class="ques-con-content"
+                         ng-bind="getquestion.qtitle| cut:true:30:' ...'">
+                    </a>
+
+                </div>
+                <div class="answer-con first" data-answer-id="207702" id="answer-con">
+                    <div class="user"> <a href="" ng-bind="getquestion.user_name"></a>
+                        <span class="signature">回答：</span>
+
+                    </div>
+                    <div class="answer-content" ng-bind-html="getquestion.rdetail| cut:true:30:'...'" id="indexRdetail">
+                    </div>
+                    <div class="ctrl-bar clearfix"> <span class="agree-with " data-ques-id="334021" data-answer-id="207702" data-hasop=""><b>赞同</b><em ng-bind="getquestion.dianzan_zuida"></em></span>
+                        <span class="oppose " data-ques-id="334021" data-answer-id="207702" data-hasop="">反对</span>
+
+                        <div class="share-box clearfix">
+                            <div class="show-btn">分享</div>
+                            <div class="share-box-con">
+                                <div class="bdsharebuttonbox bdshare-button-style0-16" data-tag="share_answer_207702" data-quesid="334021" data-bd-bind="1492824134047">
+                                    <a class="bds_weixin icon-share-weichat" data-cmd="weixin" title="分享到微信"></a>
+                                    <a class="bds_tsina icon-share-weibo" data-cmd="tsina" title="分享到新浪微博"></a>
+                                    <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+                                </div>
+                            </div>
+                        </div> <span class="shrink">收起</span>
+
+                    </div>
+                    <!--.ctrl-bar end-->
+                </div>
+            </div>
+            <!--.ques-answer end-->
+            <do-page></do-page>
+        </div>
+        <div class="wenda-list" ng-show="count==2">
+
+            <div class="ques-answer" ng-repeat="getquestions in itemx2[curpage]">
+                <div class="tag-img">
+                    <a href="" >
+                        <img ng-src="{{getquestions.c_sortimg}}" title="JAVA">
+                    </a>
+                </div>
+                <!--.tag-img end-->
+                <div class="from-tag">来自
+                    <a href=""  ng-bind="getquestions.c_sortname"></a>
+
+                </div>
+                <!--.from-tag end-->
+                <div class="ques-con">
+                    <a ui-sref="make-question-detail({qno:getquestions.qno})" class="ques-con-content"
+                        title="java面向对象那块是不是有点难理解" ng-bind="getquestions.qtitle| cut:true:30:' ...'">
+                    </a>
+
+                </div>
+                <div class="answer-cons first" data-answer-id="207702" >
+
+                    <div class="info-bar ">
+                        <a ui-sref="make-question-detail({qno:getquestions.qno})" class="to-answer">撰写答案</a>
+                        <p class="integral-info"><a href=""  style="float: left;margin-left: 12px;">
+                            回答问题最高可获<span style="color: #ff7802;">3积分</span>哦！</a></p>
+                        <a href="" class="answer-num " >0个回答</a>
+                    </div>
+                    <div class="ctrl-bar clearfix">
+                        <span class="oppose " data-ques-id="334021" data-answer-id="207702" data-hasop="" ng-bind="getquestions.qtime"></span>
+                    </div>
+
+
+                    <!--.ctrl-bar end-->
+                </div>
+            </div>
+            <!--.ques-answer end-->
+            <do-page></do-page>
+        </div>
+        <div class="wenda-list" ng-show="count==3">
+            <div class="ques-answer" ng-repeat="getquestions in itemx1[curpage]">
+                <div class="tag-img">
+                    <a href="" >
+                        <img ng-src="{{getquestions.c_sortimg}}" title="JAVA">
+                    </a>
+                </div>
+                <!--.tag-img end-->
+                <div class="from-tag">来自
+                    <a href=""  ng-bind="getquestions.c_sortname"></a>
+
+                </div>
+                <!--.from-tag end-->
+                <div class="ques-con">
+                    <a ui-sref="make-question-detail({qno:getquestions.qno})" class="ques-con-content"
+                       title="java面向对象那块是不是有点难理解" ng-bind="getquestions.qtitle| cut:true:30:' ...'">
+                    </a>
+
+                </div>
+                <div class="answer-con first" data-answer-id="207702" >
+                    <div class="user"> <a href=""  ng-bind="getquestions.user_name"></a>
+                        <span class="signature">回答：</span>
+
+                    </div>
+                    <div class="answer-content" ng-bind-html="getquestions.rdetail| cut:true:30:' ...'">
+                        <span class="see-more">[ 查看全部 ]</span>
+                    </div>
+                    <div class="ctrl-bar clearfix">
+                        <span class="oppose " data-ques-id="334021" data-answer-id="207702" data-hasop="" ng-bind="getquestions.qtime"></span>
+
+                    </div>
+
+
+                    <!--.ctrl-bar end-->
+                </div>
+            </div>
+            <!--.ques-answer end-->
+            <do-page></do-page>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-3 ">
+        <div class="right-top">
+            <table class="tbt table">
+                <tr border="0">
+                    <td rowspan="2"><img ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}" style="width: 60px; height: 60px; border-radius: 30px;"></td>
+                    <td>
+                        <span style="font-size: 18px">{{user_name}}</span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>积分</span><span>0</span>
+                    </td>
+                    <td>积分商城</td>
+                </tr>
+            </table>
+            <table class="text-center table"width="100%">
+                <tr>
+                    <td>提问</td>
+                    <td>回答</td>
+                    <td>关注</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="myfocus">
+            <h3>我关注的分类</h3>
+            <hr>
+            <div class=" text-center">
+                <p>   你还没有关注任何分类</p>
+                <button class=" btn btn-md btn-success">马上关注</button>
+            </div>
+        </div>
+        <div class="advice">
+            <h3 class="col-md-6 text-left">推荐分类</h3>
+            <h3 class="col-md-6 text-right">全部分类</h3>
+            <hr>
+            <ul class="cls-list ">
+                <li>
+                    <div class="class-info">
+                        <div class="class-icon">
+                            <a href="" >
+                                <img src="http://img.mukewang.com/563aff300001f47400900090.jpg" alt="Python">
+                            </a>
+                        </div><!--.class-icon end-->
+                        <h4><a href="" >Python</a></h4>
+                        <p class="follow-person">12933人关注</p>
+                        <a  class="follow btn btn-sm btn-info">关注</a>
+                    </div><!--.class-info end-->
+                    <div class="desc">Python是一种面向对象、解释型计算机程序设计语言；Python语...</div>
+                </li><!--li end-->
+                <li>
+                    <div class="class-info">
+                        <div class="class-icon">
+                            <a href="" >
+                                <img src="http://img.mukewang.com/563aff440001e80700900090.jpg" alt="JavaScript">
+                            </a>
+                        </div><!--.class-icon end-->
+                        <h4><a href="" >JavaScript</a></h4>
+                        <p class="follow-person">52299人关注</p>
+                        <a class="follow btn btn-sm btn-info">关注</a>
+                    </div><!--.class-info end-->
+                    <div class="desc">JavaScript做为Web前端开发师需要掌握的必杀技术，它是互联...</div>
+                </li>
+                <li>
+                    <div class="class-info">
+                        <div class="class-icon">
+                            <a href="" >
+                                <img src="http://img.mukewang.com/563afe97000178c200900090.jpg" alt="C++">
+                            </a>
+                        </div><!--.class-icon end-->
+                        <h4><a href="" >C++</a></h4>
+                        <p class="follow-person">12650人关注</p>
+                        <a href="javascript:void(0)" data-tag-id="30" class="follow">关注</a>
+                    </div><!--.class-info end-->
+                    <div class="desc">C++是在C语言的基础上开发的一种通用编程语言，应用广泛。C++支持...</div>
+                </li>
+            </ul>
+            <hr>
+        </div>
+        <div class="ad">
+            <!--<img  src="images/ad.png" alt="">-->
+        </div>
+        <div class="hotquestion">
+            <h3 class="title">热门问题</h3>
+            <ul>
+                <li>
+                    <p class="content"><a  href="">话说，大家想编程的最初初衷是什么</a></p>
+                    <div class="info-bar clearfix">
+                        <a  class="answer-num">298 回答</a>
+                        <a  href="" class="follow-num">7 关注</a>
+                        <a  href="" class="from">来自 C</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="content"><a href="">话说，大家想编程的最初初衷是什么</a></p>
+                    <div class="info-bar clearfix">
+                        <a  class="answer-num">298 回答</a>
+                        <a  href="" class="follow-num">7 关注</a>
+                        <a  href="" class="from">来自 C</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="content"><a  href="">话说，大家想编程的最初初衷是什么</a></p>
+                    <div class="info-bar clearfix">
+                        <a  class="answer-num">298 回答</a>
+                        <a  href="" class="follow-num">7 关注</a>
+                        <a  href="" class="from">来自 C</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="content"><a  href="">话说，大家想编程的最初初衷是什么</a></p>
+                    <div class="info-bar clearfix">
+                        <a  class="answer-num">298 回答</a>
+                        <a  href="" class="follow-num">7 关注</a>
+                        <a  href="" class="from">来自 C</a>
+                    </div>
+                </li>
+                <li>
+                    <p class="content"><a  href="">话说，大家想编程的最初初衷是什么</a></p>
+                    <div class="info-bar clearfix">
+                        <a  class="answer-num">298 回答</a>
+                        <a  href="" class="follow-num">7 关注</a>
+                        <a  href="" class="from">来自 C</a>
+                    </div>
+                </li>
+
+            </ul><!--ul end-->
+        </div>
+
+        <div class="leifeng">
+            <h3 class="title">
+                <span>回答雷锋榜</span>
+                <span class="leifeng-tab js-leifeng-tab" data-type="week">一周</span>
+                <span class="leifeng-tab js-leifeng-tab active" data-type="day">今日</span>
+            </h3>
+
+            <div class="leifeng-tab-box leifeng-day js-leifeng-tab-box" data-type="day">
+                <ul class="leifeng-tab-box-min">
+                    <li>
+                        <div class="ranking first">1</div>
+                        <div class="user-pic">
+                            <a  href="">
+                                <img  class="img-circle" src="http://img.mukewang.com/583d2ab20001050406400640-100-100.jpg" title="习惯受伤">
+                            </a>
+                        </div><!--.user-pic end-->
+                        <div class="user-name">
+                            <a  href="">习惯受伤</a>
+                        </div><!--.user-name end-->
+                        <div class="user-info">
+                            <span class="role">全栈工程师</span>
+                            <span class="answer-num">13回答</span>
+                        </div><!--.user-info end-->
+                    </li>
+                    <li>
+                        <div class="ranking second">2</div>
+                        <div class="user-pic">
+                            <a  href="">
+                                <img  class="img-circle" src="http://img.mukewang.com/545862510001f70c02200220-100-100.jpg" title="developForMyDream">
+                            </a>
+                        </div><!--.user-pic end-->
+                        <div class="user-name">
+                            <a  href="">developForMyDrea...</a>
+                        </div><!--.user-name end-->
+                        <div class="user-info clearfix">
+                            <span class="role">JAVA开发工程师</span>
+                            <span class="answer-num">11回答</span>
+                        </div><!--.user-info end-->
+                    </li>
+                    <li>
+                        <div class="ranking third">3</div>
+                        <div class="user-pic">
+                            <a  href="">
+                                <img  class="img-circle" src="http://img.mukewang.com/580aeb710001b73106400640-100-100.jpg" title="西兰花伟大炮">
+                            </a>
+                        </div><!--.user-pic end-->
+                        <div class="user-name">
+                            <a  href="">西兰花伟大炮...</a>
+                        </div><!--.user-name end-->
+                        <div class="user-info clearfix">
+                            <span class="role">学生</span>
+                            <span class="answer-num">8回答</span>
+                        </div><!--.user-info end-->
+                    </li>
+                    <li>
+                        <div class="ranking ">4</div>
+                        <div class="user-pic">
+                            <a  href="">
+                                <img  class="img-circle" src="http://img.mukewang.com/54584e1f0001bec502200220-100-100.jpg" title="KFJKL_97">
+                            </a>
+                        </div><!--.user-pic end-->
+                        <div class="user-name">
+                            <a  href="">KFJKL_97</a>
+                        </div><!--.user-name end-->
+                        <div class="user-info clearfix">
+                            <span class="role">学生</span>
+                            <span class="answer-num">8回答</span>
+                        </div><!--.user-info end-->
+                    </li>
+                    <li>
+                        <div class="ranking ">5</div>
+                        <div class="user-pic">
+                            <a  href="">
+                                <img  class="img-circle" src="http://img.mukewang.com/5458502c00012d4a02200220-100-100.jpg" title="time_is_everything">
+                            </a>
+                        </div><!--.user-pic end-->
+                        <div class="user-name">
+                            <a  href="">time_is_everythi...</a>
+                        </div><!--.user-name end-->
+                        <div class="user-info clearfix">
+                            <span class="role">JAVA开发工程师</span>
+                            <span class="answer-num">7回答</span>
+                        </div><!--.user-info end-->
+                    </li>
+                </ul>
+                <div class="lyleif"><span class="js-lyleif">显示另外5个雷锋</span></div>
+            </div>
+
+        </div>
+    </div>
+</div>

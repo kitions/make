@@ -1,0 +1,49 @@
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+
+}
+/*导航条*/
+/*.container {*/
+     /*margin: 0 !important;*/
+     /*padding:0!important;*/
+ /*}*/
+.head a{
+    color:white !important;
+}
+
+.head img{
+    height:100%;
+    padding-top: 5px;
+}
+.head div{
+    margin: 0 !important;
+    padding:0!important;
+}
+.head .col-md-12 input, .col-lg-12 input{
+    width:200px!important; ;
+    margin: 0!important;
+    padding:0!important;
+    border-left: 0; border-right: 0; border-top: 0; border-bottom: 1px solid #b9d369;
+}
+.head{
+    /*margin: 0!important;*/
+    /*padding:0!important;*/
+    font-size:1.5em;
+    height:60px;
+    margin-left: -0.8px;
+
+}
+.head{
+    position: relative;
+}
+.head .down{
+   left:-80px!important;
+}
+ .word{
+}
+
+ .navbar-header img{
+     margin-left: 35%;
+ }
+/*导航条结束*/

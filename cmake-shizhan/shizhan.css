@@ -1,0 +1,590 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 800px;
+}
+/*div{border: 2px solid red!important;}*/
+/*顶部轮播*/
+.banner-bg-box {
+    position: relative;
+    /*padding-top: 24px;*/
+    padding-bottom: 35px;
+    width: 100%;
+    /*background-color: #ff6e49;*/
+    box-sizing: border-box;
+}
+
+.l {
+    float: left;
+}
+.r {
+    float: right;
+}
+.caroursel{
+    width: 100%;
+    margin: auto;
+}
+.banner-bg-box .banner-bg {
+    position: relative;
+    width:90%;
+    margin:auto;
+}
+
+/*顶部轮播结束*/
+
+
+
+/*课程列表*/
+.index-main {
+    width:100%;
+    position: relative;
+    background-color: #F3F5F7;
+}
+.cato-nav-box {
+    width:100%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.cato-nav-box .cato-nav-row {
+    padding-top:30px;
+    /*padding-bottom: 20px;*/
+    text-align: center;
+}
+.cato-nav-box .cato-nav-row .cato-nav-item {
+    display: inline-block;
+    margin: 0 6px;
+}
+.cato-nav-box .cato-nav-row .cato-nav-item a {
+    display: block;
+    line-height: 14px;
+    padding: 9px 12px;
+    font-size: 14px;
+    color: #07111b;
+}
+.cato-nav-box .cato-nav-row .cato-nav-item.on a {
+    background: #f01414;
+    color: #fff;
+    border-radius: 2px;
+}
+
+.index-list-wrap{
+    width:90%;
+    margin: auto;
+    /*background-color: #00CC33;*/
+}
+.index-list-wrap h2 {
+    font-size: 24px;
+    line-height: 24px;
+    color: #4d555d;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.moco-course-list{
+    min-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+.moco-course-wrap{
+    min-width:220px;
+    max-width: 230px;
+    flex: 1;
+    height:190px;
+    margin:10px;
+    margin-top:30px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.1);
+    position: relative;
+}
+.moco-course-intro{
+    position: relative;
+    padding-top:20px;
+    top: -55px;
+    margin: auto;
+    height:110px;
+    width:100%;
+    background-color:#fff;
+    padding-left: 10px;
+    border-top-width:20px;
+    border-top-color:papayawhip;
+    transition: transform 0.5s;
+}
+.moco-course-intro:hover{
+    transform:translateY(-40px);
+}
+.moco-course-intro h3{
+    font-size:medium;
+}
+.moco-course-intro p{
+    font-size: small;
+}
+a:link, :visited, ins {
+    text-decoration: none;
+}
+.moco-course-bottom{
+    position: relative;
+    top: -110px;
+    line-height: 60px;
+    height:60px;
+    width:100%;
+    background-color: #fff;
+    padding-left: 10px;
+}
+.color-red {
+    color: #EF1300!important;
+}
+
+
+.recom-box {
+    margin: auto;
+    width: 90%;
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 22px;
+    /*background-color: #00a0f0;*/
+}
+.recom-box a,
+.recom-box .right-pic {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.recom-box a img,
+.recom-box .right-pic img {
+    width: 588px;
+    height: 122px;
+}
+.recom-box .right-pic {
+    margin-left: 24px;
+}
+.recom-box a:before,
+.recom-box .right-pic:before {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+    -webkit-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+}
+.recom-box a:before {
+    width: 80px;
+    height: 350px;
+    top: -100px;
+    left: -150px;
+}
+.recom-box .right-pic:before {
+    width: 80px;
+    height: 550px;
+    top: -40px;
+    left: -180px;
+}
+.recom-box a:hover::before {
+    -webkit-transition: left .8s;
+    -moz-transition: left .8s;
+    transition: left .8s;
+    left: 550px;
+}
+.recom-box .right-pic:hover::before {
+    -webkit-transition: left .8s;
+    -moz-transition: left .8s;
+    transition: left .8s;
+    left: 480px;
+}
+/*课程列表*/
+
+
+/*老师介绍*/
+
+.index-teacher {
+    position: relative;
+    margin: auto;
+    width:100%;
+    text-align: center;
+    color: white;
+}
+.index-teacher .index-main {
+    height: 605px;
+    overflow: hidden;
+    background-color:black;
+}
+.index-teacher .slide-draw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.index-teacher .index-teacher-title {
+    height: 236px;
+    overflow: hidden;
+}
+.index-teacher .index-teacher-title h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+.index-teacher .index-teacher-title p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 20px;
+}
+.index-teacher .star-item {
+    /*width: 2400px;*/
+    width:100%;
+    margin: auto;
+    position: absolute;
+    top: 225px;
+}
+.index-teacher .star-item li {
+    position: relative;
+    float: left;
+    left:70px;
+    box-sizing: border-box;
+    padding-top: 48px;
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: All 0.2s ease-in-out;
+    -webkit-transition: All 0.2s ease-in-out;
+    -moz-transition: All 0.2s ease-in-out;
+    -o-transition: All 0.2s ease-in-out;
+}
+.index-teacher .star-item li:last-child {
+    margin-right: 0;
+}
+.index-teacher .star-item li span {
+    display: block;
+}
+.index-teacher .star-item li .teacher-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.index-teacher .star-item li .star-info {
+    text-align: center;
+}
+.index-teacher .star-item li .star-info h3 {
+    font-size: 24px;
+    line-height: 24px;
+    color: white;
+    margin-top: 16px;
+}
+.index-teacher .star-item li .star-info p {
+    font-size: 14px;
+    line-height: 14px;
+    color: white;
+    margin-top: 15px;
+}
+.index-teacher .star-item li .star-info span {
+    font-size: 12px;
+    color: #93999f;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: none;
+}
+.index-teacher .star-item li .start-course {
+    margin: 15px 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid #d9dde1;
+    font-size: 12px;
+    line-height: 25px;
+    display: none;
+}
+.index-teacher .star-item li .start-course a {
+    display: block;
+    color: #f01414;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.index-teacher .star-item li .start-course a:hover {
+    color: #f01414;
+    text-decoration: none;
+}
+.index-teacher .star-item li:hover {
+    background: #fff;
+    transform: translate(0, -180px);
+    -webkit-transform: translate(0, -180px);
+    -moz-transform: translate(0, -180px);
+    -o-transform: translate(0, -180px);
+    -ms-transform: translate(0, -180px);
+    height: 492px;
+    border-radius: 2px;
+}
+.index-teacher .star-item li:hover .start-course {
+    display: block;
+}
+.index-teacher .star-item li:hover span {
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.index-teacher .star-item li:hover .star-info h3,
+.index-teacher .star-item li:hover .star-info p {
+    color: #07111b;
+}
+.index-teacher .star-item-btn {
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.index-teacher .star-item-btn li {
+    border-radius: 25px;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+.index-teacher .star-item-btn li.on {
+    background: #fff;
+    border: 2px solid #fff;
+}
+/*老师介绍*/
+
+.imgslidb{
+    position: relative;
+    margin: auto;
+    top:-20px;
+    width:100%;
+    background-color: #F3F5F7!important;
+    z-index: 50;
+    text-align: center;
+    font-weight: bolder;
+    height:550px;
+}
+.w{
+    background-color: #F3F5F7;
+}
+
+
+.poster-list li{
+    background-color: white;
+}
+
+
+.scroll_div {
+    width:100%;
+    text-align: center;
+    margin: 42px auto 0;
+    height: 310px;
+}
+.scroll_div .i_btn {
+    display: none;
+    width: 26px;
+    height: 70px;
+    position: absolute;
+    top: 110px;
+    z-index: 99;
+}
+.scroll_div .prev_L {
+    background: url("/static/module/index/img/arrow_l.png") no-repeat center center;
+    left: -45px;
+}
+.scroll_div .next_R {
+    background: url("/static/module/index/img/arrow_r.png") no-repeat center center;
+    right: -45px;
+}
+.scroll_div .pic-content {
+    width:100%;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 0;
+}
+.scroll_div .pic-content li {
+    display: none;
+    position: absolute;
+    z-index: 0;
+    width: 800px;
+    height: 233px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.scroll_div .pic-content li img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 32px 24px 0 32px;
+    float: left;
+}
+.scroll_div .pic-content li .user-content {
+    padding: 32px 32px 32px 116px;
+    background-color: #fff;
+}
+.scroll_div .pic-content li .user-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #07111b;
+    text-align: left;
+}
+.scroll_div .pic-content li .user-content p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #4d555d;
+    text-align: left;
+    margin-top: 16px;
+}
+.scroll_div .pic-content li .user-content .student-tag {
+    margin-top: 12px;
+    text-align: left;
+    font-size: 12px;
+    color: #93999f;
+}
+.scroll_div .pic-content li .user-content .student-tag span {
+    margin-right: 24px;
+}
+.scroll_div .pic-content li .user-content .student-tag a {
+    color: #008cc8;
+}
+.scroll_div .pic-content li .user-content .student-tag a:hover {
+    color: #00a0dc;
+}
+.scroll_div .pic-content li:nth-child(1) {
+    display: block;
+    left: 0%;
+    z-index: 1;
+    opacity: 0.6;
+}
+.scroll_div .pic-content li:nth-child(2) {
+    display: block;
+    left: 8%;
+    z-index: 2;
+    opacity: 0.8;
+}
+.scroll_div .pic-content li:nth-child(3) {
+    display: block;
+    left: 17%;
+    z-index: 3;
+    -webkit-box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+.scroll_div .pic-content li:nth-child(4) {
+    display: block;
+    right: 8%;
+    z-index: 2;
+    opacity: 0.8;
+}
+.scroll_div .pic-content li:nth-child(5) {
+    display: block;
+    right: 0%;
+    z-index: 1;
+    opacity: 0.6;
+}
+.scroll_div .banner-dots {
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.scroll_div .banner-dots li {
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+    transition: transform .2s;
+    cursor: pointer;
+    border: 2px solid #bdc2c7;
+}
+.scroll_div .banner-dots li.active {
+    background: #93999f;
+    border: 2px solid #93999f;
+}
+.index-classmate {
+    height: 560px;
+    overflow: hidden;
+}
+.index-classmate h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #07111b;
+    line-height: 36px;
+    margin-top: 60px;
+}
+.index-classmate p {
+    text-align: center;
+    font-size: 14px;
+    color: #4d555d;
+    line-height: 24px;
+    margin-top: 20px;
+}
+
+.home-slideshow {
+    height: 605px;
+    background: url(/static/module/index/img/cover_02.jpg) no-repeat center 0;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    box-sizing: content-box;
+    position: relative;
+}
+

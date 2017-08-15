@@ -1,0 +1,105 @@
+<div>
+    <header>
+    <div id="header">
+        <div class="page-container" id="nav" style="z-index: auto;">
+            <div id="logo" class="logo">
+                <a ui-sref="index" target="_self" class="hide-text" title="首页"></a>
+            </div>
+            <a id="cd-menu-trigger">
+                <span class="cd-menu-text ">Menu</span>
+                <span class="cd-menu-icon"></span>
+            </a>
+            <ul class="nav-item">
+                <li class="set-btn visible-xs-block js-header-avator">
+                    <a  ui-sref="index" target="_self">
+                    </a>
+                </li>
+                <li class="actives">
+                    <a ui-sref="index" style="color: white" target="_self">主页</a>
+                </li>
+                <li><a ui-sref="course" class="program-nav" target="_self" style="color: white">课程</i></a></li>
+                <li>
+                    <a ui-sref="shizhan" target="_self"  style="color: white">实战</a>
+                </li>
+                <li><a ui-sref="knowledge"  target="_self"  style="color: white">知识路径</a></li>
+                <li><a ui-sref="monkeyasking" target="_self"  style="color: white">猿问</a></li>
+            </ul>
+            <div id="login-area">
+                <ul class="clearfix logined">
+                    <li class="shop-cart"ng-init="count=0" id="shop-cart"ng-mouseover="count=1"ng-mouseleave="count=0">
+                        <a ui-sref="make-shopcar-mycart" class="shop-cart-icon" target="_blank">
+                            <span class="glyphicon glyphicon-shopping-cart icon-shopping-cart js-endcart" ></span>
+                            <span class=" js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
+                            <span>购物车</span>
+                        </a>
+                        <div ng-show="count==1"ng-hide="count==0" class="my-cart" id="js-my-cart"style="display:block">
+                            <div class="cart-title-box clearfix">
+                                <h2 class="l">我的购物车</h2>
+                                <h5 class="r">已加入<span class="js-incart-num">0</span>门课程</h5>
+                            </div>
+                            <div class="cart-wrap">
+                                <div class="clear-cart">
+                                    <span class="cartIcon glyphicon glyphicon-shopping-cart icon-shopping-cart"></span>
+
+                                    <h3>购物车里空空如也</h3>
+                                    <div class="text">快去这里选购你中意的课程</div>
+                                    <p><a class="go-link" href="http://coding.imooc.com" target="_blank">实战课程</a></p>
+                                    <p><a class="go-link" href="http://www.imooc.com/course/program" target="_blank">职业路径</a></p>
+                                </div>
+                            </div>
+                            <div class="more-box clearfix">
+                                <div class="l show-box">
+                                    <span class="text"><a href="http://order.imooc.com/myorder" target="_blank">我的订单中心</a></span>
+                                </div>
+                                <a ui-sref="make-shopcar-mycart" target="_blank" class="r btn btn-red go-cart">去购物车</a>
+                            </div>
+                        </div>
+                    </li>
+                    <make-top-all-login-regist-directive></make-top-all-login-regist-directive>
+                </ul>
+            </div>
+            <div class="search-warp clearfix" style="min-width: 32px; height: 60px;">
+                <div class="pa searchTags">
+                    <a href="http://class.imooc.com/sc/27" >ECShop</a>
+                </div>
+                <div class="search-area" data-search="top-banner">
+                    <input class="search-input" type="text" ng-model="txtSearch" ng-change="transValue()">
+                    <ul class="search-area-result" data-suggest-result="suggest-result">
+                    </ul>
+                </div>
+                <div ui-sref="make-search"ng-click="trans()" class="showhide-search" data-show="no"><i class="glyphicon glyphicon-search"></i></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="cd-lateral-nav">
+    <ul class="cd-navigation">
+        <li class="item-has-children">
+                <img width="40" height="40" style="border-radius: 50%"ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}">
+        </li> <!-- item-has-children -->
+        <li class="item-has-children">
+            <a ui-sref="index" style="color: white" target="_self">主页</a>
+        </li> <!-- item-has-children -->
+        <li class="item-has-children">
+            <a ui-sref="course" class="program-nav" target="_self" style="color: white">课程<i class="icn-new"></i></a>
+        </li> <!-- item-has-children -->
+        <li class="item-has-children">
+            <a ui-sref="shizhan" target="_self"  style="color: white">实战</a>
+        </li> <!-- item-has-children -->
+        <li>
+            <a ui-sref="knowledge"  target="_self"  style="color: white">知识路径</a>
+        </li>
+        <li>
+            <a ui-sref="monkeyasking" target="_self"  style="color: white">猿问</a>
+        </li>
+        <li>
+            <a href="">我的设置</a>
+        </li>
+        <li>
+            <a href=""ng-click="exit()" >退出</a>
+        </li>
+    </ul> <!-- cd-navigation -->
+
+</nav>
+</div>

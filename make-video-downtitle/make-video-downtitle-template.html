@@ -1,0 +1,130 @@
+<div>
+
+    <!--评论开始-->
+    <div class="video-down-container">
+        <!--播放器下左边开始-->
+        <div class="video-down-left">
+            <ul class="course-menu course-video-menu ">
+                <li class="course-menu-item"><a ng-class="{true: 'active', false: 'inactive'}[count==1]"
+                                                href="javascript:void(0)" ng-click="count=1" id="plMenu">评论</a></li>
+                <li class="course-menu-item"><a ng-class="{true: 'active', false: 'inactive'}[count==2]"
+                                                href="javascript:void(0)" ng-click="count=2" id="qaMenu">问答</a></li>
+                <li class="course-menu-item" style="float: right"><a href="javascript:void(0)"  ui-sref="make-edit">>>前去练习</a></li>
+            </ul>
+            <!--评论模块-->
+            <div ng-show="count==1">
+                <div class="publish-wrap ">
+                    <div class="pl-input-wrap ">
+                        <a href="javascript:void(0)" class="user-head l">
+                            <img ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}">
+                        </a>
+                        <div class="pl-input-inner l">
+                            <textarea type="text" class="js-placeholder" placeholder="扯淡、吐槽、表扬、鼓励……想说啥就说啥！" ng-model="aaa"></textarea>
+                            <span class="num-limit"><span id="js-pl-limit">0</span>/300</span>
+                        </div>
+                        <div class="pl-input-btm input-btm">
+                            <div class="verify-code l"></div>
+                            <input type="button" class="btn course-btn" value="发表评论" ng-click="submit(aaa)">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="video-line"></div>    <!--下划线 -->
+
+            <make-video-down-comment-directive></make-video-down-comment-directive>
+            </div>
+            <!--问答模块开始-->
+            <make-video-down-question-directive ng-show="count==2"></make-video-down-question-directive>
+
+
+
+        </div> <!-- 播放器下左边导航结束   -->
+        <!-- 播放器下中布局用-->
+        <div class="video-down-middle"></div>
+        <!-- 播放器下右边开始   -->
+        <div class="video-down-right">
+            <!-- 资料下载-->
+            <div class="coursedownload">
+                <h3>资料下载</h3>
+                <ul class="downlist">
+                    <li>
+                        <span><i class="icon icon-folder glyphicon glyphicon-folder-open"></i>AngularJS实战第二章第一节M</span>
+                        <a href="javascript:void (0)" class="downcode" target="_blank" download="" data-id="188"
+                           title="AngularJS实战第二章第一节">下载</a>
+                    </li>
+                    <li>
+                        <span><i class="icon icon-folder glyphicon glyphicon-folder-open"></i>AngularJS实战第二章第二节</span>
+                        <a href="javascript:void (0)" class="downcode" target="_blank" download="" data-id="189"
+                           title="AngularJS实战第二章第二节">下载</a>
+                    </li>
+                    <li>
+                        <span><i class="icon icon-folder glyphicon glyphicon-folder-open"></i>AngularJS实战第二章第二节</span>
+                        <a href="javascript:void (0)" class="downcode" target="_blank" download="" data-id="190"
+                           title="AngularJS实战第二章第二节">下载</a>
+                    </li>
+                    <li>
+                        <span><i class="icon icon-folder glyphicon glyphicon-folder-open"></i>AngularJS实战第二章第三节</span>
+                        <a href="javascript:void (0)" class="downcode" target="_blank" download="" data-id="191"
+                           title="AngularJS实战第二章第三节">下载</a>
+                    </li>
+                    <li>
+                        <span><i class="icon icon-folder glyphicon glyphicon-folder-open"></i>AngularJS实战第二章第三节</span>
+                        <a href="javascript:void (0)" class="downcode" target="_blank" download="" data-id="192"
+                           title="AngularJS实战第二章第三节">下载</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 推荐课程-->
+            <div class="box  mb40">
+                <h4>推荐课程</h4>
+                <ul class="js-courserecom other-list">
+                    <li>
+                        <a href="javascript:void (0)" > <span class="name autowrap">Angular 4.0从入门到实战 打造在线竞拍网站</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)" > <span class="name autowrap">AngularJS仿拉勾网WebApp  开发移动端单页应用</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)" > <span
+                                class="name autowrap">jQuery基础(二)—DOM篇</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)" > <span class="name autowrap">HTML+CSS基础课程</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void (0)" > <span class="name autowrap">如何用CSS进行网页布局</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 问答推荐-->
+            <div class="wendalist js-right-wenda" style="display: block;">
+                <div class="course-right-title">
+                    <h3>问答推荐</h3>
+                    <a href=""  class="more">更多</a>
+                </div>
+                <ul>
+                    <li><a href="javascript:void (0)" >在看面向对象编程指南的时候...</a><i>1 回答</i>
+                    </li>
+                    <li><a href="javascript:void (0)" >javascript里对函数的定义</a><i>1 回答</i>
+                    </li>
+                    <li><a href="javascript:void (0)" >请问前端框架先学习哪个比web a...</a><i>3 回答</i>
+                    </li>
+                    <li><a href="javascript:void (0)" >angular ngRepeat普</a><i>1 回答</i>
+                    </li>
+                    <li><a href="javascript:void (0)" >买什么平板好？求大</a><i>1 回答</i>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>

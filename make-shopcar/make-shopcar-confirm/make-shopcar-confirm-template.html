@@ -1,0 +1,88 @@
+<div>
+    <div class="shopCarHeaderBg">
+        <div class="cart-header-warp">
+            <div class="cart-title left">
+                <h1>确认订单</h1>
+            </div>
+
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row shangpinheader">
+            <div class=" col-xs-6 col-sm-6 col-md-10 ">
+                <span class="shangpin">商品信息</span>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2">
+                <a href="#" class="iHaveAnswer">我有疑问，需要反馈？</a>
+            </div>
+        </div>
+
+        <div class="row cart-shangpin-content" >
+
+            <div class="col-xs-12 col-sm-12 col-md-2"><img ng-src="{{getActualcombDetail.acover_img}}" alt="" width="161" height="91"></div>
+            <div class="col-xs-12 col-sm-12 col-md-10">
+                <div class="row ">
+                    <div class="col-xs-8 col-sm-8 col-md-7 cart-content-font" ng-bind="getActualcombDetail.aname"></div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 priceAll" ng-cloak>￥{{getActualcombDetail.price}}.00</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-9"></div>
+            <div class="col-xs-8 col-sm-8 col-md-2">
+                <div class=" text-right" >共1件商品，商品总金额：</div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-1">￥{{getActualcombDetail.price}}.00</div>
+        </div>
+        <div class="row" style="    margin-top: 10px;">
+            <div class="col-xs-0 col-sm-0 col-md-9"></div>
+            <div class="col-xs-8 col-sm-8 col-md-2">
+                <div class="text-right " >用户：</div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-1 " ng-cloak style="font-size: 13px">{{user_name}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-9"></div>
+            <div class="col-xs-8 col-sm-8 col-md-2">
+                <div class="text-right jianju" >应付：</div>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-1 priceAll">￥{{getActualcombDetail.price}}.00</div>
+        </div>
+
+
+        <div class="row">
+            <div class=" col-xs-5 col-sm-5  col-md-10 col-lg-10"></div>
+            <div class=" col-xs-7 col-sm-7  col-md-2 col-lg-2">
+                <a  ng-click="submitOrder()"><div class="btn btn-danger btn-lg btn-tijiao">提交订单</div></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" col-xs-6 col-sm-6  col-md-9"></div>
+            <div class="col-xs-6 col-sm-6  col-md-3">
+                <input type="checkbox" class="agreeMent" > <span>我已经阅读并同意 《用户付费协议》</span>
+            </div>
+        </div>
+
+    </div >
+    <div  class="setup-popl moco-modal-layer fixed" style="top:100px;left:750px;width:480px;height:150px;">
+        <div class="moco-modal-title"><div>
+            <span>提示框</span>
+            <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+        </div>
+        </div>
+        <div class="moco-modal-inner">
+            <div class="moco-modal-dialog" style="display: block;">
+                <div class="tpl-avator">
+                    <div class="moco-form-group avator-wapper"style="font-size: large">
+                        您的订单已存在该课程
+                    </div>
+                    <div class="moco-control-input">
+                        <p class="js-gerror g_error"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mmmm setup-coverLayer" ></div>
+</div>

@@ -1,0 +1,33 @@
+<div class="video-comment-all " >
+
+    <div class="video-comment-content-container">
+        <ul>
+            <li class="pl-list  " ng-repeat="comment in comments|limitTo:a">
+                <div class="pl-list-avator">
+                    <a href="j" target="_blank">
+                        <img width="40" height="40" ng-src="http://opdizmh0n.bkt.clouddn.com/{{comment.user_icon}}" >
+                    </a>
+                </div>
+                <div class="pl-list-main">
+                    <div class="pl-list-nick"> <a href="javascript:void(0)" target="_blank" ng-bind="comment.user_name"></a>
+                    </div>
+                    <div class="pl-list-content" ng-bind="comment.ccdetail"></div>
+                    <div class="pl-list-btm ">
+                        <span class="pl-list-time l" ng-bind="comment.cctime"></span>
+                        <div class="pl-list-btm ">
+                                <a title="赞" href="javascript:void(0)" class="pl-praise list-praise r" data-id="146459">
+                                    <span ng-click="like($event,comment.ccno);" class="glyphicon glyphicon-thumbs-up  " ng-class="comment.style"></span>
+                                    <span ng-bind="comment.dianzanrenshu" class="renshu"></span>
+                                </a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="video-line"></div>    <!--下划线 -->
+            </li>
+            <p class="href-warp"><a ng-click="a=a+4">加载更多</a></p>
+       </ul>
+
+    </div>
+
+</div><!--评论模块结束-->

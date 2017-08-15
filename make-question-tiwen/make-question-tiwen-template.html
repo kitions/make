@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <!--页面左-->
+        <div class="col-md-8 sucesspage"  >
+            <h2 class="new-save-title">提问</h2>
+            <div class="quesdetail ">
+                <span class="ques-label first-label">*</span>
+                <div class="question-area">
+                    <input type="text" id="ques-title" class="ipt autocomplete ipt-error" maxlength="255" name="title"
+                           placeholder="请一句话说明你的问题，以问号结尾" style="border: 1px solid #9d9d9d;" ng-model="qtitle" required>
+                    <p class="errortip">标题不能少于5个汉字！</p>
+                    <dl class="send-area-result" style="display: none;"></dl>
+                </div>
+            </div>
+
+            <!--编辑器开始-->
+            <div  class="container app" style="width: 740px">
+                <div text-angular="text-angular" name="htmlcontent" ng-model="htmlcontent" ta-disabled='disabled'></div>
+
+            </div>
+            <!--<button type="button" class="btn btn-lg btn-success" >提交</button>-->
+            <!--编辑器结束-->
+
+            <!--问题分类标签-->
+            <div class="mbottom">
+                <span class="ques-label">*</span>
+                <div id="tag-title" class="new-tags ques-tag defaultbox">
+                    <p class="new-tag-info">选择问题分类，请选择一个</p>
+                    <!-- <p class="tag-tip">您最多可以从以下选择3个标签哟！</p> -->
+
+                    <div id="js-tags" class="taglist">
+                        <div ng-repeat="sort in sortData"class="save-list-tag" style="display: inline-block">
+                        <a href="javascript:"  ng-bind="sort.c_sortname"  ng-click="asd(sort.c_sortno)"></a>
+                        </div>
+
+                    </div>
+                    <p class="errortip firse">问题选择1个分类</p>
+                </div>
+            </div><!--问题分类标签结束-->
+
+            <div class="verify-box ">
+                <span class="ques-label l">*</span>
+                <div class="verify-code">
+                    <input type="text"  id="code_input" maxlength="4" class="verify-code-ipt" placeholder="请输入验证码" style="    border: 1px solid #9d9d9d;">
+                    <!--<button id="my_button">验证</button>-->
+                    <a class="verify-img-wrap js-verify-refresh"  href="javascript:void(0)">
+                        <div id="v_container" class="verify-img" ></div>
+                    </a>
+
+
+                    <span class="errtip"></span>
+                    <div class="saveques-bottom">
+                        <a href="javascript:;" id="my_button" class="btn btn-red link-btn publishbtn" ng-click="subaa(qtitle)">发布(Ctrl+Enter)</a>
+                        <p class="global-errortip js-global-error"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>  <!--页面左结束-->
+
+        <!--<div class="col-md-1"></div>   &lt;!&ndash; 布局用&ndash;&gt;-->
+
+        <!--页面右-->
+        <div class="col-md-3" >
+            <div class="panel-body bbs-sendques">
+                <h1>提问注意事项</h1>
+                <dl>
+                    <dd>1、大家每天可以免费提出两个问题，从第三个问题起，每个问题扣除2点积分，请知晓哦；</dd>
+                    <dd>2、您是来解决问题？请先搜索是否已经有同类问题吧。这样您就省心少打字。</dd>
+                    <dd>3、没找到是么？就在发问题时精确描述你的问题，不要写与问题无关的内容哟；</dd>
+                    <dd>4、慕课讨论更热衷于解达您想要的答案。能引起思考和讨论的知识性问题；</dd>
+                    <dt>问答禁止这些提问</dt>
+                    <dd>1、禁止发布求职、交易、推广、广告类与问答无关信息将一律清理。</dd>
+                    <dd>2、尽可能详细描述您的问题，如标题与内容不符，或与问答无关的信息将被删除扣分。</dd>
+                    <dd>3、问答刷屏用户一律冻结帐号</dd>
+                </dl>
+            </div>
+
+        </div><!--页面右-->
+    </div>
+    <div  class="setup-popl moco-modal-layer fixed scucess-layer" style="top:200px;left:750px;width:480px;height:150px;">
+        <div class="moco-modal-title"><div>
+            <span>提示框</span>
+            <i class="moco-modal-close glyphicon glyphicon-remove"></i>
+        </div>
+        </div>
+        <div class="moco-modal-inner">
+            <div class="moco-modal-dialog" style="display: block;">
+                <div class="tpl-avator">
+                    <div class="moco-form-group avator-wapper"style="font-size: 15px;">
+                    </div>
+                </div>
+                <div class="moco-form-group w140">
+                    <div class="moco-control-input">
+                        <span ng-click="open()" class="save moco-modal-close"style="height:40px;width:60px;margin-top:-0px;margin-left: 150px; border-radius: 20%">确定</span>
+                        <p class="js-gerror g_error"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mmmm setup-coverLayer scucess" ></div>
+
+</div>

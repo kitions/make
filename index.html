@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>make</title>
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="js/jquery-3.1.1.js"></script>-->
+    <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="js/ngImgCrop/compile/minified/ng-img-crop.css">
+
+    <!--<script src="js/angular/mangular.js"></script>-->
+    <!--//添加的CDN标签-->
+    <script src="//cdn.bootcss.com/angular.js/1.5.5/angular.min.js"></script>
+    <!--<script src="js/angular-ui-router/release/angular-ui-router.js"></script>-->
+    <script src="//cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <!--<script src="js/angular-animate/angular-animate.js"></script>-->
+    <script src="//cdn.bootcss.com/angular.js/1.5.5/angular-animate.min.js"></script>
+    <!--<script src="js/angular-sanitize/angular-sanitize.js"></script>-->
+    <script src="//cdn.bootcss.com/angular.js/1.5.5/angular-sanitize.min.js"></script>
+    <!--<script src="js/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+    <script src="//cdn.bootcss.com/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/app.controller.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/app.filter.js"></script>
+    <!--主页-->
+    <script src="make-index/make-index-module.js"></script>
+    <script src="make-index/make-index-directive.js"></script>
+    <!--<link rel="stylesheet" href="make-index/css/swiper.min.css">-->
+    <link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+    <!--主页结束-->
+
+    <!--主导航-->
+    <script src="make-topall-nav/make-topall-nav-module.js"></script>
+    <script src="make-topall-nav/make-topall-nav-directive.js"></script>
+    <script src="make-topall-nav/js/check-login.js"></script>
+    <!--<script src="make-topall-nav/js/iconfont.js"></script>-->
+    <!--导航登录注册-->
+    <script src="make-topall-nav/make-topall-loginregist/make-topall-loginregist-module.js"></script>
+    <script src="make-topall-nav/make-topall-loginregist/make-topall-loginregist-directive.js"></script>
+    <!--登录注册模块-->
+    <script src="cmake-login/check-login.js"></script>
+    <script src="cmake-login/gVerify.js"></script>
+    <!--<script src="cmake-login/iconfont.js"></script>-->
+
+    <!--搜索模块-->
+    <script src="cmake-search/make-search.module.js"></script>
+    <script src="cmake-search/make-search.directive.js"></script>
+    <!--主导航结束-->
+
+    <!--课程页面-->
+    <script src="cmake-course/make-course.module.js"></script>
+    <script src="cmake-course/make-course.directive.js"></script>
+    <!--课程页面-->
+
+    <!--实战-->
+    <link rel="stylesheet" href="cmake-shizhan/carousel.css">
+    <script src="cmake-shizhan/make-shizhan.module.js"></script>
+    <script src="cmake-shizhan/make-shizhan.directive.js"></script>
+    <!--实战-->
+    <!--实战详情页面-->
+    <script src="ac-details/shizhan-info.module.js"></script>
+    <script src="ac-details/shizhan-info.directive.js"></script>
+    <script src="ac-details-chapter/ac-details-chapter.module.js"></script>
+    <script src="ac-details-chapter/ac-details-chapter.directive.js"></script>
+    <script src="ac-details-comments/ac-details-comments.module.js"></script>
+    <script src="ac-details-comments/ac-details-comments.directive.js"></script>
+    <!--实战详情页面-->
+    <!--课程详情页面-->
+    <script src="make-course-detail/make-course-detail-module.js"></script>
+    <script src="make-course-detail/make-course-detail-directive.js"></script>
+    <!--课程详情页面结束-->
+
+
+    <!--购物车-->
+    <link rel="stylesheet" href="make-shopcar/myshopcar.css">
+    <link rel="stylesheet" href="make-shopcar/shopcarcss.css">
+    <script src="make-shopcar/make-shopcar-mycart/make-shopcar-mycart-module.js"></script>
+    <script src="make-shopcar/make-shopcar-mycart/make-shopcar-mycart-directive.js"></script>
+    <script src="make-shopcar/make-shopcar-confirm/make-shopcar-confirm-module.js"></script>
+    <script src="make-shopcar/make-shopcar-confirm/make-shopcar-confirm-directive.js"></script>
+    <script src="make-shopcar/make-shopcar-pay/make-shopcar-pay-module.js"></script>
+    <script src="make-shopcar/make-shopcar-pay/make-shopcar-pay-directive.js"></script>
+    <!--购物车结束-->
+
+    <!--播放视频-->
+
+    <!--<script src="make-video-top/js/video.min.js"></script>-->
+    <script src="https://cdn.bootcss.com/video.js/6.1.0/video.min.js"></script>
+    <script src="make-video-top/make-video-top-module.js"></script>
+    <script src="make-video-top/make-video-top-directive.js"></script>
+    <!--播放视频结束-->
+
+    <!--分页-->
+    <script src="pages/page.module.js"></script>
+    <script src="pages/page.directive.js"></script>
+
+
+    <!--代码编辑器-->
+    <link rel="stylesheet" href="make-edit/css/codecss.css">
+    <link rel="stylesheet" href="make-edit/css/video-top.css">
+    <link rel="stylesheet" href="make-edit/css/videoCss.css">
+    <!--<link rel="stylesheet" href="make-edit/css/codemirror.css">-->
+    <!--<script src="make-edit/js/codemirror.js">   </script>-->
+    <link href="https://cdn.bootcss.com/codemirror/5.26.0/codemirror.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/codemirror/5.26.0/codemirror.min.js"></script>
+    <script src="make-edit/make-edit-module.js"></script>
+    <script src="make-edit/make-edit-directive.js"></script>
+    <!--代码编辑器结束-->
+
+    <script src="make-video-downtitle/make-video-downtitle-module.js"></script>
+    <script src="make-video-downtitle/make-video-downtitle-directive.js"></script>
+    <!--知识路径-->
+
+    <script src="cmake-zhishi-path/make-zhishi-path.module.js"></script>
+    <script src="cmake-zhishi-path/make-zhishi-path.directive.js"></script>
+    <!--知识路径-->
+
+    <!--评论和问答-->
+    <script src="make-video-downcomment/make-video-downcomment-module.js"></script>
+    <script src="make-video-downcomment/make-video-downcomment-directive.js"></script>
+    <script src="make-video-downquestion/make-video-downquestion-module.js"></script>
+    <script src="make-video-downquestion/make-video-downquestion-directive.js"></script>
+
+    <!--问答主页问题详情和提问-->
+    <script src="make-question-index/make-question-index-module.js"></script>
+    <script src="make-question-index/make-question-index-directive.js"></script>
+
+    <script src="make-question-tiwen/make-question-tiwen-module.js"></script>
+    <script src="make-question-tiwen/make-question-tiwen-directive.js"></script>
+    <script src="make-question-tiwen/src/gVerify.js"></script>
+    <!--提问-->
+            <!--cdn网络编辑器链接-->
+    <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,300">-->
+    <!--<link rel="stylesheet" href="http://textangular.com/dist/textAngular.css" type="text/css">-->
+    <!--<script src='http://textangular.com/dist/textAngular-rangy.min.js'></script>-->
+    <!--<script src='http://textangular.com/dist/textAngular-sanitize.min.js'></script>-->
+    <!--<script src='http://textangular.com/dist/textAngular.min.js'></script>-->
+
+    <!--<link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="js/textAngular/dist/textAngular.css">-->
+    <!--<script src="js/textAngular/dist/textAngular-sanitize.min.js"></script>-->
+    <!--<script src="js/textAngular/dist/textAngular-rangy.min.js"></script>-->
+    <!--<script src="js/textAngular/dist/textAngular.min.js"></script>-->
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/textAngular/1.5.15/textAngular-rangy.min.js"></script>
+    <script src="https://cdn.bootcss.com/textAngular/1.5.15/textAngular-sanitize.min.js"></script>
+    <link href="https://cdn.bootcss.com/textAngular/1.5.15/textAngular.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/textAngular/1.5.15/textAngular.min.js"></script>
+
+    <script src="make-question-detail/make-question-detail-module.js"></script>
+    <script src="make-question-detail/make-question-detail-directive.js"></script>
+    <!--问结束-->
+
+    <!--个人中心-->
+    <script src="cperson-center/person-center.module.js"></script>
+    <script src="cperson-center/person-center.directive.js"></script>
+    <!--个人中心-->
+    <!--导入service 服务-->
+    <script src="service/service.module.js"></script>
+    <script src="service/public/public.module.js"></script>
+    <script src="service/user/user.module.js"></script>
+    <script src="service/user/user.service.js"></script>
+    <script src="service/index/index.module.js"></script>
+    <script src="service/index/index.service.js"></script>
+    <!--导入图片上传模块-->
+
+    <script src="js/ng-file-upload-shim/ng-file-upload-shim.js"></script>
+    <script src="js/ng-file-upload/ng-file-upload.js"></script>
+
+    <!--导入图片剪切模块-->
+    <!--<script src="js/ngImgCrop/compile/minified/ng-img-crop.js"></script>-->
+    <script src="https://cdn.bootcss.com/ng-img-crop/0.3.2/ng-img-crop.js"></script>
+    <!--页尾-->
+    <script src="make-footer/make-footer-module.js"></script>
+    <script src="make-footer/make-footer-directive.js"></script>
+    <link rel="stylesheet" href="make-footer/public.css">
+    <!--页尾结束-->
+    <style type="text/css">
+        .iconbg {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body ng-app="index">
+<div ng-controller="ModalDemoCtrl">
+    <!-- 这里就是控制器的内容 ,然后直接在控制器里面插入modal的页面元素-->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h1 class="modal-title">
+                <!--<button class="btn btn-primary" type="button" ng-click="ok()">OK</button>-->
+                <!--<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>-->
+                <button type="button" class="close" ng-click="cancel()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+            </h1>
+        </div>
+
+        <div class="modal-body">
+            <div ng-controller="TabsDemoCtrl">
+                <form name="outerForm" class="tab-form-demo">
+                    <uib-tabset active="activeForm">
+                        <uib-tab index="0" heading="登录" >
+                            <ng-form name="nestedForm" ng-controller="loginCtrl">
+                                <p class="rlf-tip-globle color-red" id="signin-globle-error"></p>
+                                <div class="rlf-group pr has-error">
+                                    <!--登录账号-->
+                                    <input type="text" maxlength="11" id="user_tell"
+                                           ng-model="user_tel" name="user_tel"
+                                           class="xa-emailOrPhone ipt ipt-email js-own-name"
+                                           placeholder="请输入登录手机号" required
+                                           onblur="checklog()">
+                                    <p class="rlf-tip-wrap errorHint " id="check-tell"></p>
+                                </div>
+
+                                <div class="rlf-group  pr ">
+                                    <!--登录密码-->
+                                    <input type="password" name="user_password" ng-model="user_password" id="user_password"
+                                           class="ipt ipt-pwd js-loginPassword js-pass-pwd" placeholder="6位以上，包含大小写和数字组合" maxlength="50"
+                                           onblur="checkpwd()">
+                                    <p class="rlf-tip-wrap errorHint  " id="check-loginpwd"></p>
+                                </div>
+                                <div class=" rlf-appendix   clearfix">
+                                    <label for="auto-signin" class="rlf-autoin l" hidefocus="true">
+                                        <input type="checkbox" checked="checked" class="auto-cbx" id="auto-signin">下次自动登录</label>
+                                    <a href="" class="rlf-forget r" target="_blank" hidefocus="true">忘记密码 </a>
+                                </div>
+                                <div class="rlf-group clearfix">
+                                    <input type="button" value="登录" hidefocus="true" class="btn-red btn-full xa-login"id="btn"  ng-click="loginin()" >
+                                </div>
+                            </ng-form>
+                        </uib-tab>
+                        <!--注册-->
+                        <uib-tab index="1" heading="注册" >
+                            <ng-form name="nestedForm" ng-controller="registCtrl">
+                                <p class="rlf-tip-globle color-red rlf-g-tip" id="signup-globle-error"></p>
+                                <div class="rlf-group  pr">
+                                    <!--注册的手机号-->
+                                    <input type="text" maxlength="11" id="registel" class="xa-emailOrPhone ipt ipt-email js-own-name"
+                                           ng-model="user_tel" name="user_tel" placeholder="请输入登录手机号" required onblur="checkregisttel()">
+                                    <p class="rlf-tip-wrap errorHint " id="check-name"></p>
+                                </div>
+                                <div class="rlf-group  pr ">
+                                    <input type="password" name="password" id="registpwd" class="ipt ipt-pwd js-loginPassword js-pass-pwd"
+                                           ng-model="user_password" name="user_password" placeholder="6-16位密码，区分大小写，不能用空格" required maxlength="16"
+                                           onblur="checkregistPwd()">
+                                    <p class="rlf-tip-wrap errorHint  " id="check-pwd"></p>
+                                </div>
+                                <div class="rlf-group pr has-error">
+                                    <input type="text" id="js-phoneVerity" data-validate="require-string" data-minlength="4" class="ipt ipt-pwd"
+                                           placeholder="请输入短信验证码" maxlength="4" autocomplete="off">
+                                    <!--<p class="reSend pa active js-reSend">重新发送<span class="js-second"></span></p>-->
+
+
+                                    <!--<p class="rlf-tip-wrap errorHint color-red" data-error-hint="请输入正确验证码">请输入正确验证码</p>-->
+                                </div>
+                                <!--<div class="rlf-group form-control ">-->
+
+                                    <!--<input type="text" id="code_input" name="verify" class="ipt ipt-verify l"  maxlength="4" data-minlength="4" placeholder="请输入验证码"onblur="checkCode()">-->
+                                    <!--<div id="v_container" class="verify-img-wrap"></div>-->
+                                    <!--<p class="rlf-tip-wrap errorHint color-red"id="check-code" data-error-hint="验证码错误"></p>-->
+                                <!--</div>-->
+                                <div class="rlf-group clearfix">
+                                    <input type="button" id="signup-btn" value="注册" hidefocus="true" class="btn-red btn-full r" style="  float: left;"
+                                           ng-click="regist()" >
+                                </div>
+                            </ng-form>
+                        </uib-tab>
+                    </uib-tabset>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <div class="pop-login-sns clearfix">
+                <span class="l">其他方式登录</span>
+                <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=weibo" class="pop-sns-weibo r mr60">
+                    <svg class="icon icon-weibo" aria-hidden="true">
+                        <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=weixin" class="pop-sns-weixin r">
+                    <svg class="icon icon-weixin" aria-hidden="true">
+                        <use xlink:href="#icon-weixin"></use>
+                    </svg>
+                </a>
+                <a href="javascript:void(0)" hidefocus="true" data-login-sns="/passport/user/tplogin?tp=qq" class="pop-sns-qq r">
+                    <svg class="icon icon-qq" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="erweima xa-showQrcode"></div>
+        </div>
+    </script>
+    <div make-topall-nav-directive></div>
+</div>
+<section class="cd-main-content"  ui-view>
+
+</section>
+
+<div make-footer-directive style="margin-top: 30px"></div>
+
+</body>
+</html>

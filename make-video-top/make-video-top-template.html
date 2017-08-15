@@ -1,0 +1,59 @@
+<div>
+<!--导航开始-->
+
+<div class="head">
+    <div class="navbar  "
+         style="background-color: black;color:white !important;margin-top: -4px!important;">
+
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 video-back">
+            <span class="glyphicon glyphicon-arrow-left "></span>
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <ul class="list-unstyled">
+                <li class="video-class video-class-name1" ng-cloak>第{{getVideo.chapterno}}章 {{getVideo.dir_content}}</li>
+                <li class="video-class video-class-name2" ng-cloak>{{getVideo.chapterno}}-{{getVideo.sectionno}} {{getVideo.sectioncontent}}</li>
+            </ul>
+        </div>
+
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 ">
+            <span class="video-shareqq">分享</span>
+            <img src="make-video-top/images/QQ.png" alt="" class="video-share">
+            <img src="make-video-top/images/weixin.png" alt="" class="video-share">
+            <img src="make-video-top/images/weibo.png" alt="" class="video-share">
+        </div>
+
+
+
+
+    </div>
+</div>
+<!--导航结束-->
+<!--播放器开始-->
+<div class="m">
+    <!--<video ></video>-->
+    <video id="my-video" class="video-js" controls preload="auto"
+           poster="" data-setup="{}" ng-src="{{videoUrl(link)}}">
+        <source  type="video/mp4">
+        <!--<source src="http://opdizmh0n.bkt.clouddn.com/H.mp4" type="video/mp4">-->
+        <!--<source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">-->
+        <!--<source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">-->
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+
+    <script type="text/javascript">
+    var myPlayer = videojs('my-video');
+    videojs("my-video").ready(function () {
+    var myPlayer = this;
+    myPlayer.play();
+    });
+    </script>
+
+</div>
+<!--播放器结束-->
+
+    <div make-video-downtitle-directive></div>
+</div>

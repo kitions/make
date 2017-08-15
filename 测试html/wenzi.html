@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <script src="../js/jquery-3.1.1.js"></script>
+    <style type="text/css">
+        *{margin:0px; padding:0px;}
+        p{ width: 350px; height: 50px; overflow:hidden; color:red; white-space:nowrap; text-overflow:ellipsis;}
+    </style>
+</head>
+
+<body>
+<p>这是用的css,如果文字多余12个字符，那么剩余的文字将用省略号表示</p>
+<ul id="demo">
+    <li>如果文字多余12个字符那么剩余的文字将用省略号表示如果文字多余
+        12个字符那么剩余的文字将用省略号表示如果文字多余12个字符那么剩余的文字将用省略号表
+        示如果文字多余12个字符那么剩余的文字
+        将用省略号表示如果文字多余12个字符那么剩余的
+        文字将用省略号表示如果文字多余12个字符那么剩余的文字将用省略号
+        表示如果文字多余12个字符那么剩余的文字将用省略号表示如果文字多余12个字符那么剩余的
+        文字将用省略号表示如果文字多余12个字符那么剩余的文字将用省略号表示如果文字多余12
+        个字符那么剩余的文字将用省略号表示</li>
+    <li>如果文字多余12个字符那么剩余的文字将用省略号表示</li>
+    <li>如果文字多余12个字符那么剩余的文字将用省略号表示</li>
+    <li>如果文字多余12个字符那么剩余的文字将用省略号表示</li>
+</ul>
+<div id="xker">
+    新客网特效频道涵盖了文字特效代码、导航菜单特效代码等多种代码，
+    本代码为您演示的是面对一长篇文章时，只显示部分文字，其他文字以省略号代替，
+    点击省略号可以展开全部文字。新客网特效频道涵盖了文字特效代码
+    、导航菜单特效代码等多种代码，本代码为您演示的是面对一长篇文章时，
+    只显示部分文字，其他文字以省略号代替，点击省略号可以展开全部文字。
+    只显示部分文字，其他文字以省略号代替，点击省略号可以展开全部文字。
+    只显示部分文字，其他文字以省略号代替，点击省略号可以展开全部文字。
+    只显示部分文字，其他文字以省略号代替，点击省略号可以展开全部文字。
+    只显示部分文字，其他文字以省略号代替，点击省略号可以展开全部文字。
+    新客网特效频道涵盖了文字特效代码、导航菜单特效代码等多种代码，
+    本代码为您演示的是面对一长篇文章时，只显示部分文字，其他文字以省略号代替，
+    点击省略号可以展开全部文字。</div>
+<script>
+
+//    (function(){
+//        var o = document.getElementById("xker");
+//        var s = o.innerHTML;
+//        var p = document.createElement("span");
+//        var n = document.createElement("a");
+//        p.innerHTML = s.substring(0,100);
+//        n.innerHTML = s.length > 100 ? "..." : "";
+//        n.href = "###";
+//        n.onclick = function(){
+//            if (n.innerHTML == "..."){
+//                n.innerHTML = "收起";
+//                p.innerHTML = s;
+//            }else{
+//                n.innerHTML = "...";
+//                p.innerHTML = s.substring(0,100);
+//            }
+//        }
+//        o.innerHTML = "";
+//        o.appendChild(p);
+//        o.appendChild(n);
+//    })();
+</script>
+<script type="text/javascript">
+    function cutStr(obj){
+        for (var i = 0,len=obj.length ;i<len;i++){
+            var text = obj[i].innerHTML;
+            var newText = text.substring(0,100);
+            var n = obj[i].innerHTML.length;
+            if(n>12){
+                obj[i].innerHTML = newText + "...";
+            }
+        }
+    }
+    cutStr(document.getElementByIdx_x("demo").getElementsByTagName_r("li"));
+</script>
+</body>
+</html>

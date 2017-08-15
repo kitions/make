@@ -1,0 +1,110 @@
+<div class="haha">
+
+    <!--课程详情大banner以及包含的信息 start-->
+    <div class="actualcomb-courseinfos-banner">
+        <div ng-class="getActualcombDetail.a_background">
+            <!--当前课程所属的路径 start-->
+            <div class="path">
+                    <span class=""><a href="">实战</a><span>\</span>&nbsp;<span ng-bind="getActualcombDetail.aname"></span></span>
+            </div>
+            <!--课程基本参数难度、时长、学习人数信息 start-->
+            <div class=" info-details" style="">
+                <div class="col-lg-4 col-sm-12 col-md-12 col-lg-offset-4" style="">
+                    <table class="" style="">
+                        <tr>
+                            <td class="td"><b >难度</b>&nbsp;&nbsp;&nbsp;&nbsp;<span ng-bind="getActualcombDetail.degreename"></span></td>
+                            <td class="td"><b>时长</b>&nbsp;&nbsp;<span ng-bind="getActualcombDetail.atime"></span></td>
+                            <td style="font-size: 15px;color:#BBAAAE"><b >学习人数</b>&nbsp;&nbsp;&nbsp;&nbsp;<span ng-bind="getActualcombDetail.renshu"></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--课程价格 start-->
+            <div class=" pricebox" style="">
+                <div class="price-text" style="">￥{{getActualcombDetail.price}}.00</div>
+            </div>
+            <!--立即购买 start-->
+            <div class="row">
+                <div class="btnpress" style="">
+                    <div class="btn-buyimmedia" style="">
+                        <a href="" class="btn-buyimmedia-a" ng-click="buyNow(getActualcombDetail.ano)">立即购买</a>
+                    </div>
+                    <div class="btn-addcart-container" style="">
+                        <div class="btn-addcart" style="">
+                            <a href="">
+                                <img src="ac-details/images/加入购物车.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--课程详情大banner以及包含的信息 end-->
+
+
+    <!--副导航-->
+    <div class="actualcomb-courseinfos-nav">
+        <div style="">
+            <a href="javascript:void 0" ng-click="count=1" ng-class="{true: 'active', false: 'inactive'}[count==1]">课程介绍</a>
+        </div>
+        <div >
+            <a href="javascript:void 0" ng-click="count=2" ng-class="{true: 'active', false: 'inactive'}[count==2]">课程章节</a>
+        </div>
+        <div >
+            <a href="javascript:void 0" ng-click="count=3" ng-class="{true: 'active', false: 'inactive'}[count==3]">用户评论</a>
+        </div>
+    </div>
+
+
+    <!--课程介绍-->
+    <div ng-show="count==1" >
+        <div class="row actualcomb-courseinfo-introduction-video" style="">
+            <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2" style="">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1" style="margin-top:20px">
+                    <img src="{{getActualcombDetail.a_introvideoimg}}" class="img-responsive" alt="Cinque Terre" align="center">
+                    {{getActualcombDetail.a_introvideotext}}
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:40px">
+            <img ng-src="{{getActualcombDetail.a_intro}}" alt="" width="100%">
+            <img ng-src="{{getActualcombDetail.a_envir}}" alt="" width="100%">
+
+        </div>
+        <div style="">
+            <div class="row" style="background-color: #F3F5F7">
+                <p style="margin-top:20px;margin-left: 110px;font-size:25px;">课前必学</p>
+                <div style="height: 20px"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-sm-6 col-md-4 col-lg-2" ng-repeat="firstcourse in getA_firstcourse">
+                    <div class="index-card-container course-card-container"    >
+                        <a target="_blank" class="course-card" ui-sref="courseinfo({cno:firstcourse.cno,c_sortname:firstcourse.c_sortname})">
+                            <!--<a target="_blank" class="course-card" ng-click="courseDetail(courseAll.cno,courseAll.c_sortname) ">-->
+                            <div class="course-card-top cart-color " ng-class="firstcourse.bgcolor" >
+                                <i class="imv2-war"></i>
+                                <span ng-bind="firstcourse.c_sortname"></span>
+                            </div>
+                            <div class="course-card-content">
+                                <h3 class="course-card-name" ng-bind="firstcourse.cname"></h3>
+                                <p title="HTML+CSS基础教程8小时带领大家步步深入学习标签用法和意义" ng-bind="firstcourse.cover_detail"></p>
+                                <div class="clearfix course-card-bottom">
+                                    <div class="course-card-info" ng-cloak>
+                                        {{firstcourse.degreename}}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="course-card-bk">
+                            <img src="http://www.imooc.com/courseimg/s/cover050_s.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+    </div>
+    <div ac-details-chapter-directive ng-show="count==2"></div>
+    <div ac-details-comments-directive ng-show="count==3"></div>
+</div>

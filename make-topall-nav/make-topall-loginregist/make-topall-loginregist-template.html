@@ -1,0 +1,70 @@
+<div style="display: inline-block"  ng-switch on="isLogin">
+    <div  ng-switch-default >
+
+        <li class="header-signin login-regist">
+            <a     id="js-signin-btn" ng-click="open()">登录</a>
+        </li>
+
+        <li class="header-signup login-regist">
+            <a  id="js-signup-btn" ng-click="open()">注册</a>
+        </li>
+</div>
+    <div ng-switch-when="true">
+        <li class="set_btn user-card-box" id="header-user-card"ng-init="count=0" ng-mouseover="count=2"ng-mouseleave="count=0">
+            <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" ui-sref="personinfo" target="_self">
+                <img width="40" height="40" ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}">
+                <i class="myspace_remind" style="display: none;"></i>
+                <span style="display: none;">动态提醒</span>
+            </a>
+            <div ng-show="count==2"ng-hide="count==0" class="g-user-card">
+                <div class="card-inner">
+                    <div class="card-top clearfix">
+                        <a ui-sref="personinfo" class="l">
+                            <img ng-src="http://opdizmh0n.bkt.clouddn.com/{{user_icon}}" >
+                        </a>
+                        <div class="card-top-right-box l">
+                            <a ui-sref="personinfo"><span class="name text-ellipsis" ng-bind="user_name"></span></a>
+                            <div class="meta" >
+                                <a href="" ng-bind="career_name" style="text-overflow:ellipsis "></a>
+
+                            </div>                            </div>                        </div>
+                    <div class="user-center-box">
+                        <ul class="clearfix">
+                            <li class="l"><a href="" target="_blank">
+                                <span class="user-center-icon icon-tick"></span>我的课程</a>
+                            </li>                                <li class="l">
+                            <a href="" target="_blank">
+                                <span class="user-center-icon icon-receipt"></span>订单中心</a>
+                            <i id="js-usercard-coupon-icon" style="display: none;"></i>
+                        </li>
+                            <li class="l"><a href="" target="_blank">
+                                <span class="user-center-icon icon-score_shop"></span>积分商城</a></li>
+                            <li class="l"><a href="" target="_blank">
+                                <span class="user-center-icon icon-set"></span>个人设置</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-history">
+                                    <span class="history-item">
+                        <span class="tit text-ellipsis">AngularJS实战</span>
+                        <span class="media-name text-ellipsis">1-1AngularJS实战课程简介 </span>
+                        <i class="icon-clock"></i>
+                        <a href="" class="continue" title="AngularJS实战课程简介
+                            1-1AngularJS实战课程简介">继续</a></span>
+                    </div>
+                    <div class="card-sets clearfix">
+                        <a href="javascript:void (0)" ng-click="exit()" class="r">安全退出</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </div>
+    <div ng-switch-when="false">
+        <li class="header-signin login-regist">
+            <a     id="js-signin-btn1" ng-click="open()">登录</a>
+        </li>
+
+        <li class="header-signup login-regist">
+            <a  id="js-signup-btn2" ng-click="open()">注册</a>
+        </li>
+    </div>
+    </div>
